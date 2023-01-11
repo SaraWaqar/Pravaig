@@ -1,0 +1,1724 @@
+
+
+@media (min-width:1401px) and (max-width:1600px) {
+    .center-logo img {
+        max-width: 200px;
+    }
+
+    .modal-slider img {
+        height: 600px;
+    }
+
+    .car-descript p {
+        width: 96%;
+    }
+
+    .container-1490 {
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    section.sec1 {
+        padding-top: 30px;
+    }
+
+    div ul#myTab li.nav-item::before {
+        content: '';
+        width: 2px;
+        height: 20px;
+    }
+
+    header ul.main-menu li a {
+        font-size: 16px;
+    }
+
+    header ul li.reserve-btn a {
+        padding: 7px 30px;
+    }
+
+    div#navbarSupportedContent {
+        padding-top: 10px;
+    }
+
+    .nav-tabs.main-tabs .nav-link {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+
+    ul#myTab {
+        max-width: 1020px;
+        justify-content: center;
+    }
+
+    .main-tabs {
+        margin-bottom: 20px !important;
+    }
+
+    h2.main-text {
+        font-size: 26px;
+    }
+
+    h3.accordion__itemTitle {
+        font-size: 22px;
+    }
+
+    .form-group.forColorRadio label {
+        font-size: 15px;
+    }
+
+    input[type='radio']:after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .form-group.forColorcheckbox {
+        padding: 20px 0px;
+    }
+
+    .forColorcheckbox input[type="radio"]+span {
+        height: 80px;
+        width: 80px;
+    }
+
+    .car-content h3 {
+        font-size: 32px;
+        padding: 20px 0px;
+    }
+
+    .forColorcheckbox.wheel input[type="radio"]+span {
+        width: 70px;
+        height: 70px;
+    }
+
+    .form-group.ADDONcheckbox .checkbox-text label {
+        font-size: 16px;
+    }
+
+    .form-divmain .checkbox-texts {
+        gap: 10px;
+        align-items: center;
+        min-width: 210px;
+    }
+
+    .form-divmain label {
+        font-size: 12px;
+    }
+
+    label.w100>span {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .form-group.ONscheckbox p {
+        font-size: 12px;
+    }
+
+    .checkboxConnectivity label {
+        font-size: 12px;
+    }
+
+    .checkboxConnectivity {
+        gap: 10px;
+    }
+
+    .form-group.ADDONcheckbox .checkbox-text {
+        gap: 10px;
+    }
+
+    .icon-img img {
+        width: 70%;
+    }
+
+    .accordion-body img {
+        width: 20px !important;
+    }
+
+    input.inp11 {
+        width: 15px;
+        height: 15px !important;
+    }
+
+    form.ADD-ONS .form-group {
+        padding: 12px 0px !important;
+    }
+
+    .checkboxMaintenance label {
+        font-size: 12px;
+    }
+
+    .checkboxMaintenance {
+        gap: 10px;
+    }
+
+    .car-summary {
+        padding-top: 0;
+    }
+
+    .car-summary h3 {
+        font-size: 22px;
+    }
+
+    td.same-head:first-child {
+        width: 40%;
+    }
+
+    .table td.same-head {
+        font-size: 16px;
+    }
+
+    .table tbody.same-lines td {
+        padding: 5px 0px 8px;
+        font-size: 14px;
+    }
+
+    .tables-icons img {
+        padding-right: 10px;
+        width: 26px;
+        height: 22px;
+        object-fit: contain;
+    }
+
+    .footer-links h4 {
+        font-size: 17px;
+        padding-bottom: 10px;
+    }
+
+    .footer-links ul.footer-nav li a {
+        font-size: 13px;
+        line-height: 3em;
+    }
+
+    footer img {
+        width: 50%;
+    }
+
+    .footer .social ul li {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .footer .social ul {
+        gap: 8px;
+    }
+
+    .footer-sm-log {
+        padding-bottom: 40px;
+    }
+
+    footer.foot-2 .row .col-6 p {
+        padding: 13px 0px;
+        font-size: 13px;
+    }
+
+    table.table.summarytable {
+        width: 90%;
+    }
+
+    footer.footer {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    td.same-head:nth-child(3) {
+        width: 8%;
+    }
+
+    input.inp11::before {
+        font-size: 11px;
+        left: 1px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1500px) {
+    .forColorcheckbox label {
+        flex: 0 0 20%;
+
+    }
+
+    section.sec1 {
+        padding-top: 60px;
+    }
+
+    .forColorcheckbox input[type="radio"]+span {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media (min-width:1201px) and (max-width:1400px) {
+    section.sec1 {
+        padding-top: 60px;
+    }
+
+    .checkbox-text img {
+        padding-left: 0;
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+        margin-left: 8px;
+    }
+
+    .checkboxConnectivity img {
+        padding-left: 0;
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+        margin-left: 8px;
+    }
+
+    .checkboxMaintenance img {
+        padding-left: 0;
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+        margin-left: 8px;
+    }
+
+    .modal-slider img {
+        height: 600px;
+    }
+
+    .row.first-row.sec-row .col.lg-6.m-auto {
+        padding-left: 30px;
+    }
+
+    .car-descript p {
+        width: 86%;
+    }
+
+    .modal-dialog.edit-mode {
+        max-width: 90%;
+    }
+
+    .container-1490 {
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    input.inp11::before {
+        font-size: 11px;
+        left: 1px;
+    }
+
+    header ul.main-menu li a {
+        font-size: 12px;
+    }
+
+    header ul li.reserve-btn a {
+        padding: 7px 30px;
+    }
+
+    .center-logo img {
+        max-width: 180px;
+    }
+
+    div#navbarSupportedContent {
+        padding-top: 20px;
+    }
+
+    .nav-tabs.main-tabs .nav-link {
+        padding: 10px 22px;
+        font-size: 13px;
+    }
+
+    ul#myTab {
+        max-width: 900px;
+        justify-content: center;
+    }
+
+    .main-tabs {
+        margin-bottom: 25px !important;
+    }
+
+    h2.main-text {
+        font-size: 26px;
+    }
+
+    h3.accordion__itemTitle {
+        font-size: 15px;
+    }
+
+    .form-group.forColorRadio label {
+        font-size: 12px;
+    }
+
+    input[type='radio']:after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .form-group.forColorcheckbox {
+        padding: 20px 0px;
+        gap: 10px;
+    }
+
+    .car-content h3 {
+        font-size: 32px;
+        padding: 20px 0px;
+    }
+
+    .forColorcheckbox.wheel input[type="radio"]+span {
+        width: 70px;
+        height: 70px;
+    }
+
+    .form-group.ADDONcheckbox .checkbox-text label {
+        font-size: 14px;
+    }
+
+    .form-divmain .checkbox-texts {
+        gap: 10px;
+        align-items: center;
+        min-width: 170px;
+    }
+
+    .checkboxConnectivity label {
+        font-size: 12px;
+    }
+
+    .checkboxConnectivity {
+        gap: 10px;
+    }
+
+    .form-group.ADDONcheckbox .checkbox-text {
+        gap: 10px;
+    }
+
+    .icon-img img {
+        width: 70%;
+    }
+
+    .form-divmain img {
+        width: 14px;
+    }
+
+    input.inp11 {
+        width: 15px;
+        height: 14px !important;
+    }
+
+    form.ADD-ONS .form-group {
+        padding: 8px 0px !important;
+    }
+
+    .checkboxMaintenance label {
+        font-size: 12px;
+    }
+
+    .checkboxMaintenance {
+        gap: 10px;
+    }
+
+    /* .car-summary {
+        padding-top: 100px;
+    } */
+
+    .car-summary h3 {
+        font-size: 22px;
+    }
+
+    td.same-head:first-child {
+        width: 40%;
+    }
+
+    .table td.same-head {
+        font-size: 14px;
+    }
+
+    .table tbody.same-lines td {
+        padding: 3px 0px 6px;
+        font-size: 12px;
+    }
+
+    .tables-icons img {
+        padding-right: 10px;
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+    }
+
+    .footer-links h4 {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .footer-links ul.footer-nav li a {
+        font-size: 11px;
+        line-height: 2em;
+    }
+
+    footer img {
+        width: 50%;
+    }
+
+    .footer .social ul li {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .footer .social ul {
+        gap: 8px;
+    }
+
+    .footer-sm-log {
+        padding-bottom: 40px;
+    }
+
+    footer.foot-2 .row .col-6 p {
+        padding: 10px 0px;
+        font-size: 10px;
+    }
+
+    table.table.summarytable {
+        width: 90%;
+    }
+
+
+    footer.footer {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .forColorcheckbox label {
+        flex: 0 0 22%;
+
+    }
+
+    .modal-dialog.edit-mode .modal-body.inr-popup {
+        padding: 25px 0px;
+    }
+
+    .car-descript h3 {
+        font-size: 15px;
+    }
+
+    .carousel.carousel-slider .slide img {
+        height: 470px;
+    }
+
+    .pdfSection h3 {
+        font-size: 16px;
+    }
+
+    .pdfSection {
+        max-width: 90%;
+    }
+
+    footer.foot-2.desktop p {
+        font-size: 12px;
+    }
+
+
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+
+    div ul#myTab li.nav-item::before {
+        content: '';
+        width: 2px;
+        height: 14px;
+        position: absolute;
+        top: 12px;
+        left: 0px;
+    }
+
+    .carousel.carousel-slider .slide img {
+        height: 410px;
+    }
+
+    .pdfSection h3,
+    .pdfSection h4,
+    .pdfSection span {
+        font-size: 14px;
+    }
+
+    section.sec1 {
+        padding-top: 40px;
+    }
+
+    .main-tabs {
+        margin-bottom: 70px !important;
+    }
+
+    .checkboxMaintenance img {
+        padding-left: 0;
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+        margin-left: 8px;
+    }
+
+    .modal-dialog.edit-mode .modal-body.inr-popup {
+        padding: 25px 0px;
+    }
+
+    .checkbox-text img {
+        padding-left: 0;
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+        margin-left: 8px;
+    }
+
+    .checkboxConnectivity img {
+        padding-left: 0;
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+        margin-left: 8px;
+    }
+
+    .car-descript h3 {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .car-descript p {
+        font-size: 10px;
+    }
+
+    .forColorcheckbox label {
+        flex: 0 0 27%;
+        margin-bottom: 0;
+    }
+
+    .modal-dialog.edit-mode {
+        max-width: 90%;
+    }
+
+    .modal-slider img {
+        height: 480px;
+    }
+
+    .row.first-row.sec-row .col.lg-6.m-auto {
+        padding-left: 10px;
+    }
+
+    .car-descript p {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+
+    .modal-dialog.edit-mode .modal-header button span {
+        font-size: 40px;
+    }
+
+    .car-descript-btn a {
+        width: 123px;
+        height: 35px;
+        font-size: 11px;
+        line-height: 35px;
+    }
+
+    .container-1490 {
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    input.inp11::before {
+        font-size: 11px;
+        left: 1.2px;
+        top: -2.5px;
+    }
+
+    header ul.main-menu li a {
+        font-size: 12px;
+    }
+
+    header ul li.reserve-btn a {
+        padding: 7px 30px;
+    }
+
+    .center-logo img {
+        max-width: 180px;
+    }
+
+    div#navbarSupportedContent {
+        padding-top: 40px;
+    }
+
+    .nav-tabs.main-tabs .nav-link {
+        padding: 10px 22px;
+        font-size: 11px;
+    }
+
+    ul#myTab {
+        max-width: 750px;
+        justify-content: center;
+    }
+
+    .main-tabs {
+        margin-bottom: 20px !important;
+    }
+
+    header ul.main-menu {
+        min-width: 100px;
+    }
+
+    h2.main-text {
+        font-size: 23px;
+    }
+
+    h3.accordion__itemTitle {
+        font-size: 14px;
+    }
+
+    .form-group.forColorRadio label {
+        font-size: 12px;
+    }
+
+    input[type='radio']:after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .form-group.forColorcheckbox {
+        padding: 20px 0px;
+        gap: 10px;
+    }
+
+    .forColorcheckbox input[type="radio"]+span {
+        height: 70px;
+        width: 70px;
+    }
+
+    .car-content h3 {
+        font-size: 26px;
+        padding: 20px 0px;
+    }
+
+    .forColorcheckbox.wheel input[type="radio"]+span {
+        width: 70px;
+        height: 70px;
+    }
+
+    .form-group.ADDONcheckbox .checkbox-text label {
+        font-size: 14px;
+    }
+
+    .form-divmain .checkbox-texts {
+        gap: 10px;
+        align-items: center;
+        min-width: min-content;
+    }
+
+    .form-divmain label {
+        font-size: 9px;
+    }
+
+    .form-group.ONscheckbox p {
+        font-size: 9px;
+    }
+
+    .checkboxConnectivity label {
+        font-size: 12px;
+    }
+
+    .checkboxConnectivity {
+        gap: 10px;
+    }
+
+    .form-group.ADDONcheckbox .checkbox-text {
+        gap: 10px;
+    }
+
+    .icon-img img {
+        width: 70%;
+    }
+
+    .form-divmain img {
+        width: 14px;
+    }
+
+    input.inp11 {
+        width: 15px;
+        height: 13.5px !important;
+    }
+
+    form.ADD-ONS .form-group {
+        padding: 8px 0px !important;
+    }
+
+    .checkboxMaintenance label {
+        font-size: 12px;
+    }
+
+    .checkboxMaintenance {
+        gap: 10px;
+    }
+
+    .car-summary {
+        padding-top: 10px;
+    }
+
+    .car-summary h3 {
+        font-size: 22px;
+    }
+
+    td.same-head:first-child {
+        width: 40%;
+    }
+
+    .table td.same-head {
+        font-size: 12px;
+    }
+
+    .table tbody.same-lines td {
+        padding: 3px 0px 6px;
+        font-size: 10px;
+    }
+
+    .tables-icons img {
+        padding-right: 10px;
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+    }
+
+    .footer-links h4 {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .footer-links ul.footer-nav li a {
+        font-size: 11px;
+        line-height: 2em;
+    }
+
+    footer img {
+        width: 50%;
+    }
+
+    .footer .social ul li {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .footer .social ul {
+        gap: 8px;
+    }
+
+    .footer-sm-log {
+        padding-bottom: 40px;
+    }
+
+    footer.foot-2 .row .col-6 p {
+        padding: 10px 0px;
+        font-size: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    form.models-radio .form-group.forColorRadio {
+        padding: 15px 0 15px 6px;
+    }
+
+    footer.footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    footer.foot-2.desktop p {
+        font-size: 12px;
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 991px) {
+
+    .pdfSection h3 {
+        font-size: 16px;
+    }
+
+    ul#myTab li.slide>.nav-item a::before {
+        content: '';
+        width: 2px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 3px;
+        display: block;
+        background: #ccc;
+    }
+
+    ul#myTab li.slide.selected>.nav-item {
+        position: relative
+    }
+
+
+
+
+
+    .desktop-tb {
+        display: none;
+    }
+
+    .carousel.carousel-slider .slide img {
+        height: 100%;
+    }
+
+    .pdfSection {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+    .desktop-tb.summarymbl1 {
+        display: block;
+    }
+
+    .mean-div {
+        position: relative;
+    }
+
+    .center-logo {
+        position: absolute;
+        top: -40px;
+    }
+
+    .mobile a {
+        display: block;
+    }
+
+    .car-content h3 {
+        font-size: 34px;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+
+    nav.main-nav {
+        padding-top: 30px;
+    }
+
+    .tab-mobile-tb {
+        display: block;
+    }
+
+    .icon-bar {
+        height: 30px;
+        position: absolute;
+        right: 0px;
+        z-index: 9999999999999999;
+    }
+
+    .icon-bar span {
+        width: 35px;
+        display: block;
+        height: 3px;
+        background: #000;
+        transition: all .3s ease;
+    }
+
+    .icon-bar span:nth-child(2) {
+        margin: 8px 0;
+    }
+
+    .icon-bar.icon-bar-click .top-line {
+
+        transform: rotate(230deg) translateX(-1px) translateY(-5px);
+    }
+
+    .icon-bar.icon-bar-click .center-line {
+        opacity: 0;
+    }
+
+    .icon-bar.icon-bar-click span {
+        background: #fff;
+    }
+
+    .icon-bar.icon-bar-click .bottom-line {
+        transform: rotate(130deg) translateX(-12px) translateY(13px);
+    }
+
+    div#navbarSupportedContent {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background: #282828;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: -110%;
+        height: 100vh;
+        width: 350px;
+        background: rgb(14 13 13);
+        z-index: 999999999;
+        flex-direction: column;
+        justify-content: center;
+        transition: all .5s ease;
+    }
+
+    .nav-show {
+        left: 0 !important;
+    }
+
+    header ul.main-menu {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    ul.main-menu.web-topbar {
+        display: none;
+    }
+
+    ul.main-menu.mob-topbar {
+        display: block;
+    }
+
+    header ul.main-menu li.main-logo {
+        order: -2;
+    }
+
+    header ul.main-menu li {
+        width: 100%;
+        font-size: 18px;
+        padding: 5px 0;
+    }
+
+    ul.sub-menu li a {
+        font-size: 14px;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    li.main-logo a img {
+        width: 100%;
+    }
+
+    .mobile {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .container-1470 {
+        max-width: 90VW;
+    }
+
+    .mobile img {
+        width: 55%;
+    }
+
+    .mean-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    header ul.main-menu li a {
+        color: #ffff;
+    }
+
+    ul#myTab {
+        max-width: 830px;
+        justify-content: center;
+        margin-bottom: 50px !important;
+    }
+
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
+        border-color: none !important;
+    }
+
+    .nav-tabs.main-tabs .nav-link {
+        padding: 0;
+        font-size: 14px;
+
+    }
+
+    .mblNavBar ul.slider {
+        min-height: 30px;
+    }
+
+    .nav-tabs.main-tabs .carousel .control-arrow:before,
+    .nav-tabs.main-tabs .carousel.carousel-slider .control-arrow:before {
+        margin: 0;
+        display: inline-block;
+        border-top: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+    }
+
+    section.sec1 {
+        padding-top: 30px;
+    }
+
+    .container-1490 {
+        max-width: 90vw;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .checkboxMaintenance label {
+        font-size: 16px;
+    }
+
+    .checkboxConnectivity label {
+        font-size: 16px;
+    }
+
+    .form-group.ADDONcheckbox .checkbox-text label {
+        font-size: 16px;
+    }
+
+    table.table.summarytable {
+        width: 100%;
+    }
+
+    .forColorcheckbox.wheel input[type="radio"]+span {
+        height: 95px;
+        width: 95px;
+    }
+
+    .forColorcheckbox input[type="radio"]+span {
+        width: 150px;
+        height: 150px;
+    }
+
+    h3.accordion__itemTitle {
+        font-size: 17px;
+    }
+
+    .table td.same-head {
+        font-size: 16px;
+        padding: 20px 0px 10px 0px;
+    }
+
+    .tables-icons img {
+        padding-right: 20px;
+    }
+
+    .form-group.ADDONcheckbox .checkbox-text {
+        gap: 14px;
+    }
+
+    .checkboxConnectivity {
+        gap: 14px;
+    }
+
+    .checkboxMaintenance {
+        gap: 14px;
+    }
+
+    footer.footer {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .footer-links ul.footer-nav li a {
+        font-size: 12px;
+    }
+
+    .footer .social ul li {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+        border: 1px solid #ffff;
+    }
+
+    .footer .social ul {
+        gap: 10px;
+    }
+
+    footer.foot-2 .row .col-6 p {
+        font-size: 12px;
+        padding: 16px 0px;
+    }
+
+    .footer-links h4 {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+    footer.foot-2.desktop p {
+        font-size: 12px;
+    }
+
+    .accordion {
+        max-width: 100%;
+
+        padding-top: 0;
+        margin: unset;
+    }
+
+    .car-summary {
+        padding-top: 50px;
+    }
+
+    .form-divmain label {
+        font-size: 13px;
+    }
+
+    /*  */
+    .modal-dialog.edit-mode {
+        max-width: 90%;
+    }
+
+    .modal-slider img {
+        height: 550px;
+    }
+
+    .row.first-row.sec-row .col.lg-6.m-auto {
+        padding-left: 10px;
+    }
+
+    .car-descript p {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+
+    div .modal-header .close {
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        background: #303030;
+        margin: 0;
+        padding: 0;
+        display: block;
+        opacity: 1;
+        color: #fff;
+        font-weight: 100;
+    }
+
+    .modal-dialog.edit-mode .modal-header button span {
+        color: #fff;
+    }
+
+    .modal-dialog.edit-mode .modal-header button span {
+        font-size: 30px;
+    }
+
+
+    .car-descript-btn a {
+        width: 123px;
+        height: 35px;
+        font-size: 11px;
+        line-height: 35px;
+    }
+
+    .modal-dialog.edit-mode .modal-body {
+        padding: 20px 0;
+    }
+
+    .modal-dialog.edit-mode {
+        max-width: 96%;
+    }
+
+    .row.first-row.sec-row {
+        width: 100%;
+    }
+
+    .car-descript h3 {
+        font-size: 16px;
+        line-height: 120%;
+    }
+
+    .deskNavBar {
+        display: none;
+    }
+
+    .mblNavBar {
+        display: block;
+    }
+
+    ul#myTab .carousel .control-prev.control-arrow:before {
+        content: "\f053";
+        font-family: 'FontAwesome';
+        border-right: 0px solid #ff7d00
+    }
+
+    ul#myTab .carousel .control-next.control-arrow:before {
+        content: "\f054";
+        font-family: 'FontAwesome';
+        border-left: 0px solid #ff7d00
+    }
+
+    .forColorcheckbox label {
+        flex: 0 0 17%;
+    }
+
+    .accordion img {
+        width: 20px !important;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    /* .mblNavBar.main-tabs li.nav-item:last-child .nav-link {
+        border-right: 1px solid #c4c4c4;
+         
+    } */
+    .accordion img {
+        width: 15px !important;
+    }
+
+
+    .pdfSection h3 {
+        font-size: 14px;
+    }
+
+    .form-divmain .checkbox-texts {
+        display: flex;
+        gap: 10px;
+        min-width: 170px;
+    }
+
+    .mobileFooter {
+        display: block;
+    }
+
+    .checkboxConnectivity {
+        gap: 14px;
+    }
+
+    div .row.first-row {
+        padding-bottom: 10px;
+    }
+
+    div .modal-dialog.edit-mode .modal-header button span {
+        color: #fff;
+    }
+
+    .footer-sm-log+.social {
+        display: none;
+    }
+
+    .mobileFooter {
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobileFooter .social {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .mobileFooter .social {
+        padding-bottom: 15px;
+    }
+
+
+    .col-sm-6-footer {
+        width: 50%;
+        text-align: left;
+    }
+
+    .col-sm-6-footer:nth-child(3) {
+
+        text-align: right;
+    }
+
+    .col-sm-6-footer:nth-child(5) {
+
+        text-align: right;
+    }
+
+    .stdBtn {
+        min-width: 200px;
+        font-size: 14px;
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    .pdfSection span {
+        color: #7e7d7d;
+        font-size: 14px;
+    }
+
+    .social {
+        padding-bottom: 20px;
+    }
+
+    .pdfSection {
+        text-align: center;
+    }
+
+    ul#myTab .carousel.carousel-slider .control-arrow,
+    .carousel.carousel-slider .control-arrow:hover {
+        font-size: 17px;
+        padding: 0;
+    }
+
+    ul#myTab {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        margin-bottom: 30px !important;
+    }
+
+    .row.first-row {
+        padding-bottom: 120px;
+    }
+
+    .modal-slider img {
+        height: 250px;
+    }
+
+    .nav-tabs.main-tabs .nav-link {
+        padding: 10px 10px;
+        font-size: 9px;
+    }
+
+    .mblNavBar.nav-tabs.main-tabs .nav-link {
+        padding: 0;
+        font-size: 12px;
+        min-height: 30px;
+    }
+
+    footer.footer {
+        /* background-image: url(../../Assets/img/footerbackgrouond.png); */
+        padding-top: 50px;
+        padding-bottom: 25px;
+        background-size: cover;
+    }
+
+    footer.footer {
+        text-align: center;
+        background-position: top;
+    }
+
+    .footer .social ul {
+        justify-content: center;
+    }
+
+    footer.foot-2.mobile {
+        display: block;
+    }
+
+    footer.foot-2.desktop {
+        display: none;
+    }
+
+    .footer .social ul li {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+        all: unset;
+    }
+
+    .footer .social ul {
+        gap: 20px;
+    }
+
+    .social ul li a i:hover {
+        color: #FF7D00;
+    }
+
+    .social {
+        padding-bottom: 50px;
+    }
+
+    .footer-sm-log img {
+        width: 200px;
+        object-fit: cover;
+    }
+
+    .footer-sm-log {
+        padding-bottom: 30px;
+    }
+
+    .footer-links h4 {
+        font-size: 19px;
+        margin-bottom: 0;
+    }
+
+    .link-box {
+        border-bottom: 0px solid;
+        margin-bottom: 30px;
+    }
+
+    footer.foot-2.mobile {
+        color: white;
+        padding-top: 40px;
+    }
+
+    .col-sm-6-footer:nth-child(even) .link-box {
+        text-align: right;
+    }
+
+    .col-sm-6-footer:nth-child(odd) .link-box {
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 599px) {
+
+
+    ul#myTab li.slide>.nav-item a::before {
+        height: 13px;
+    }
+
+    .modal-body .row.first-row.sec-row {
+        padding: 0px 15px;
+    }
+
+    .modal-body .row.first-row.sec-row h2.main-text {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .modal-body .car-descript-btn {
+        gap: 20px;
+    }
+
+    .sec1 .slick-slide.slick-current li.nav-item .nav-link {
+        color: #FF7D00;
+    }
+
+    .row.first-row {
+        padding-bottom: 120px;
+    }
+
+    .nav-tabs.main-tabs .nav-item.show .nav-link,
+    .nav-tabs.main-tabs .nav-link.active {
+        color: unset;
+    }
+
+    section.sec1 {
+        padding-top: 40px;
+    }
+
+    .table-responsive::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 12%);
+        border-radius: 10px;
+        background-color: #0000001f;
+    }
+
+    .table-responsive::-webkit-scrollbar {
+        width: 12px;
+        background-color: #f5f5f5;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: #FF7D00;
+    }
+
+    .nav-tabs .nav-item .nav-link.active {
+        border-bottom: 0px solid #FF7D00;
+    }
+
+    button.slide-arrow.prev-arrow.slick-arrow {
+        position: absolute;
+        left: -10px;
+        z-index: 99999;
+        background: transparent;
+        border: none;
+    }
+
+    button.slide-arrow.next-arrow.slick-arrow {
+        position: absolute;
+        right: -10px;
+        z-index: 99999999;
+        border: none;
+        background: transparent;
+    }
+
+    ul#myTab {
+        width: 100%;
+        border-bottom: 0px solid white !important;
+
+    }
+
+    .nav-tabs.main-tabs .nav-link {
+        padding: 0px 0px;
+        font-size: 15px;
+        text-align: center;
+        border-bottom: 0px solid white !important;
+        width: 114px;
+        margin: 0 auto;
+    }
+
+    button.slide-arrow:focus {
+        outline: 0px dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+        background: transparent;
+        color: #ed7c20;
+    }
+
+    table.table.summarytable {
+        display: block;
+        max-width: 600px;
+        overflow: scroll;
+        width: 600px;
+    }
+
+    .forColorcheckbox input[type="radio"]+span {
+
+        height: 80px;
+        width: 80px;
+    }
+
+    form.models-radio .form-group.forColorRadio {
+        padding: 10px 6px;
+    }
+
+    .form-group.forColorcheckbox {
+        gap: 10px;
+        padding: 20px 0px;
+    }
+
+    .forColorcheckbox label {
+        flex: 0 0 22%;
+    }
+
+    .carousel.carousel-slider .slide img {
+        height: 100%;
+    }
+
+    .defySec {
+        margin-bottom: 40px;
+    }
+
+    footer.foot-2.desktop p {
+        font-size: 12px;
+    }
+
+    h2.main-text {
+        font-size: 26px;
+    }
+
+    .car-content h3 {
+        padding: 20px 0px;
+        font-size: 26px;
+    }
+
+    .forColorcheckbox.wheel input[type="radio"]+span {
+        height: 85px;
+        width: 85px;
+    }
+
+    .car-summary h3 {
+        font-size: 26px;
+    }
+
+    .pdf1 {
+        align-items: center;
+    }
+
+    .pdf2 {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pdfSection h3 {
+        padding-left: 6px;
+    }
+
+}
+
+@media (max-width: 576px) { 
+    .forColorcheckbox input[type="radio"]+span {
+          height: 70px;
+          width: 70px;
+      }
+  
+  }
+
+
+@media (max-width: 425px) {
+    .forColorcheckbox input[type="radio"]+span {
+
+        height: 60px;
+        width: 60px;
+    }
+
+    ul#myTab .carousel.carousel-slider .control-arrow,
+    .carousel.carousel-slider .control-arrow:hover {
+        top: -10px;
+    }
+
+    .nav-tabs.main-tabs .nav-link {
+        font-size: 13px;
+        width: 104px;
+
+    }
+
+    .icon-bar span {
+        width: 32px;
+        display: block;
+        height: 2px;
+    }
+
+    .mobile img {
+        width: 60%;
+    }
+
+    .mblNavBar.nav-tabs.main-tabs .nav-link {
+        padding: 0 0;
+        font-size: 9px;
+        min-height: 17px;
+        text-align: center;
+    }
+
+    ul#myTab.mblNavBar .carousel.carousel-slider .control-arrow,
+    .mblNavBar .carousel.carousel-slider .control-arrow:hover {
+        font-size: 12px;
+    }
+
+    .mblNavBar .carousel .slider-wrapper.axis-horizontal .slider {
+        justify-content: space-around;
+        display: flex;
+    }
+}
+
+@media (max-width: 374px) {
+    .accordion__itemContent {
+        overflow-x: scroll;
+    }
+
+    .form-divmain .checkbox-texts {
+        min-width: 110px;
+    }
+
+    .form-divmain label {
+        font-size: 12px;
+    }
+
+    .form-group.ONscheckbox p {
+        font-size: 13px;
+    }
+
+    .checkboxConnectivity label,
+    .checkboxMaintenance label,
+    .form-group.ADDONcheckbox .checkbox-text label {
+        font-size: 14px;
+    }
+
+}

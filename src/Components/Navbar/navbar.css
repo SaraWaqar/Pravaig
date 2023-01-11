@@ -1,0 +1,217 @@
+
+section.sec1 {
+    padding-top: 110px;
+}
+
+div#navbarSupportedContent {
+    padding-top: 22px;
+}
+.nav-tabs.main-tabs .nav-link {
+    padding: 15px 35px;
+    /* border-right: 1px solid #A4A4A4; */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+/* identical to box height, or 21px */
+    color: #121212;
+    border-bottom: 1px solid #A4A4A4;
+    transition: all .4s ease;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: 0px;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    border-color: #FF7D00;
+}
+
+ul#myTab {
+        justify-content: center;
+        max-width: 1045px;
+        margin: 0 auto;
+        border-bottom: 0 !important;
+}
+.nav-tabs {
+    border-bottom: 1px solid #A4A4A4;
+}
+/* div#Models-tab h2 {
+    padding-top: 120px;
+} */
+
+/* slider */
+
+.row.first-row button {
+    font-size: 0;
+}
+
+.row.first-row ul.slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.row.first-row li.slick-active {
+    list-style: none;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.row.first-row button {
+    all: unset;
+    background: transparent!important;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.row.first-row li.slick-active button {
+    background: #FF7D00 !important;
+    width: 11px!important;
+    border-radius: 10px;
+}
+.nav-tabs .nav-item {
+    margin-bottom: 0px;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    border-color: #FF7D00;
+}
+
+ul#myTab {
+        justify-content: center;
+        max-width: 1045px;
+        margin: 0 auto;
+        border-bottom: 0 !important;
+}
+.nav-tabs {
+    border-bottom: 1px solid #A4A4A4;
+}
+
+div#navbarSupportedContent {
+    padding-top: 22px;
+}
+.nav-tabs.main-tabs .nav-link {
+    padding: 15px 35px;
+    /* border-right: 1px solid #A4A4A4; */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+/* identical to box height, or 21px */
+    color: #121212;
+    border-bottom: 1px solid #A4A4A4;
+    transition: all .4s ease;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color: unset;
+}
+ul#myTab li.nav-item {
+    border-right: 0px solid #A4A4A4 !important;
+    border-bottom: none;
+}
+
+
+div ul#myTab li.nav-item::before {
+    content: '';
+    width: 2px;
+    height: 25px;
+    position: absolute;
+    top: 13px;
+    left: 3px;
+    display: block;
+    background: #ccc;
+}
+
+div li.nav-item {
+    position: relative;
+}
+li.nav-item:first-child:before {
+    content: none !important;
+}
+
+
+ul#myTab li.nav-item {
+    
+    text-align: center;
+}
+ul#myTab li.nav-item:hover {
+    /* border-bottom: 1px solid #ff7d00; */
+}
+
+ul#myTab li.nav-item:last-child {
+    border-right: none !important;
+}
+.nav-tabs .nav-link:hover {
+    border-color: #FF7D00 !important;
+    color: #FF7D00 !important;
+}
+
+
+/* 
+ul#myTab {
+    width: 300px;
+    height: 50px;
+    overflow-x: scroll;
+    display: flex;
+    flex-flow: row;
+} */
+
+
+/* ul#myTab .carousel .slide {
+    max-width: 33%;
+    min-width: 33%;
+
+} */
+
+
+ul#myTab .carousel.carousel-slider .control-arrow, .carousel.carousel-slider .control-arrow:hover {
+    display: block;
+    color:#6c757d!important;
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    background: transparent;
+    opacity: 1;
+    padding: 0;
+
+    font-size: 20px;
+    bottom: 0;
+    margin-top: -6px;
+}
+ul#myTab .carousel .control-prev.control-arrow:before {
+    border-right: 8px solid #ff7d00;
+    background: #F8F0E3 !important;
+}
+ul#myTab .carousel .control-next.control-arrow:before {
+    border-left: 8px solid #ff7d00;
+    background: #F8F0E3 !important;
+}
+.nav-tabs.main-tabs .carousel  .nav-link{
+    border-bottom: 0px solid #A4A4A4;
+
+}
+
+
+
+.carousel.carousel-slider .control-arrow:hover.control-disabled, ul#myTab .carousel.carousel-slider .control-arrow.control-disabled {
+    color: rgb(255 125 0 / 50%)!important;
+    background: #F8F0E3 !important;
+}
+
+.mblNavBar {
+    display: none;
+}
+
+

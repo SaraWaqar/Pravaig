@@ -1,0 +1,685 @@
+
+
+.form-group.forColorRadio label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 150%;
+    padding-left: 12px;
+    color: #000;
+    margin-bottom: 0 !important;
+    
+}
+
+.modal-dialog .car-descript {
+    padding: 40px 0;
+}
+
+.modal-dialog .car-descript h2 {
+    margin: 30px 0;
+}
+.form-divmain img, .form-div img
+{
+    width: 20px;
+}
+.car-descript-btn a{
+    cursor: pointer;
+}
+button.accordion-button .accordion__itemIconWrap {
+    transform: rotate(0deg);
+}
+
+button.accordion-button.collapsed .accordion__itemIconWrap {
+    transform: rotate(180deg);
+}
+
+
+
+.accordion__itemIconWrap svg {
+    filter: brightness(0);
+}
+.forColorcheckbox.wheel input[type="radio"] + span{
+    background-color: transparent;
+    height: 88.19px;
+    transition: .5s ease-in all;
+    border:1px solid transparent    
+}
+.forColorcheckbox.wheel input[type="radio"] + span:hover{
+    border:1px solid #ff7d00
+}
+.form-group.ADDONcheckbox .form-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group.ADDONcheckbox .checkbox-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-group.ADDONcheckbox .checkbox-text label {
+    margin: 0;
+}
+.form-divmain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-divmain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-divmain img , .form-divmain input, .ADD-ONS input{
+    cursor: pointer;
+}
+.form-divmain .checkbox-texts {
+
+    display: flex;
+    gap: 10px;
+    min-width: 250px;
+}
+
+.year .price{
+    justify-content: flex-end;
+}
+.price {
+    min-width: 100px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+}
+/* .form-divmain img {
+    padding-left: 15px;
+} */
+.year .form-divmain label {
+    font-size: 14px;
+}
+
+.year.form-group.ONscheckbox p {
+    font-size: 14px;
+}
+
+.form-divmain label {
+    margin: 0;
+    font-size: 16px;
+    font-family:'poppins';
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+}
+.form-group.ONscheckbox p {
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+}
+.form-div label {
+    cursor: pointer;
+}
+form.ADD-ONS .form-group {
+    padding: 16px 0px;
+    border-bottom: 1px solid rgb(150 150 150 / 30%);
+    margin: 0;
+}
+.form-group.ADDONcheckbox {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    padding: 16px 0px 10px !important;
+}
+
+.checkboxConnectivity {
+    display: flex;
+ 
+    align-items: center;
+}
+.checkboxConnectivity {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.checkboxConnectivity label {
+    margin: 0;
+}
+
+.checkboxMaintenance label {
+    margin: 0;
+}
+
+.checkboxMaintenance {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    width: 100%;
+}
+label.w100 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.accordion__item.is-active .accordion__itemIconWrap {
+    transform: scaleY(-1) translateY(-10px);
+}
+.accordion__itemIconWrap svg {
+    filter: brightness(0);
+}
+.accordion__item.is-active .accordion__itemTitleWrap::after {
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+}
+.accordion__itemTitleWrap::after {
+    border-bottom: 1px solid #d3d3d3;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    z-index: 1;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease;
+}
+
+label.w100 >span {
+    margin-left: 0;
+    font-size: 16px;
+}
+
+.form-group.forColorRadio label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 150%;
+    padding-left: 12px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 0 !important;
+}
+.accordion__item.is-active .accordion__itemIconWrap {
+    transform: scaleY(-1) translateY(-10px);
+}
+.accordion__itemIconWrap {
+    width: 20px;
+    height:20px;
+    margin-left: auto;
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 0;
+    color: black;
+}
+.accordion__itemIconWrap svg {
+    filter: brightness(0);
+}
+.accordion-header::after {
+    content: '';
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    z-index: 1;
+    transition: transform .4s ease;
+    background: silver;
+    bottom: -10px;
+}
+.accordion__item.is-active .accordion__itemTitleWrap::after {
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+}
+h2.accordion-header {
+    position: relative;
+    margin-bottom: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+
+
+.forColorcheckbox input[type="radio"] {
+    display: none;
+    width: auto;
+}
+
+.forColorcheckbox label {
+    width: 100%;
+    flex: 0 0 21%;
+    flex-wrap: wrap;
+}
+
+.forColorcheckbox input[type="radio"]:checked + span {
+    font-size: 18px;
+    position: relative;
+}
+.forColorcheckbox input[type=radio]:checked + span::before {
+    content: '';
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    z-index: 1;
+}
+span.tick {
+    position: absolute;
+    z-index: 2;
+    right: 12px;
+    bottom: 8px;
+    font-size: 12px;
+}
+
+span.tick i {
+    color: inherit;
+    font-size: 13px;
+    transform: rotate(354deg);
+    font-weight: 600;
+    font-family: 'Font Awesome 6 Free';
+    color: #ff7d00;
+}
+
+
+.forColorcheckbox input[type="radio"] + span {
+    width: 100%;
+    height: 88.19px;
+    width: 88.19px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    margin: 0 !important;
+} 
+
+.form-group.forColorcheckbox {
+    padding: 30px 0px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+label.red input[type="radio"] + span {
+    background: #DB301F;
+}
+label.blue input[type="radio"] + span {
+    background: #11328F;
+}
+label.yellow input[type="radio"] + span {
+    background: #F1B640;
+}
+label.purple input[type="radio"] + span {
+    background: #271257;
+}
+label.grey input[type="radio"] + span {
+    background: #8C918D;
+}
+label.white input[type="radio"] + span {
+    background: #F3F3F3;
+}
+label.green input[type="radio"] + span {
+    background: #004225;
+}
+label.black input[type="radio"] + span {
+    background: #000;
+}
+label.lightgrey input[type="radio"] + span {
+    background: #E0DBD1;
+}
+
+label.green i {
+    color: #ff7d00;
+}
+label.red i {
+    color: #ff7d00;
+}
+label.blue i {
+    color: #ff7d00;
+}
+label.green i {
+    color: #ff7d00;
+}
+label.yellow i {
+    color: #ff7d00;
+}
+label.purple i {
+    color: #ff7d00;
+}
+
+label.grey i {
+    color: #ff7d00;
+}
+label.black i {
+    color :#ff7d00;
+}
+label.white i {
+    color: #ff7d00;
+}
+label.lightgrey i {
+    color :#ff7d00;
+}
+
+
+div .modal-dialog.edit-mode {
+    max-width: 100%;
+    width: 100%;
+}
+
+div .modal-dialog {
+    width: 80%;
+    max-width: 80%;
+    background: transparent;
+    background-color: transparent;
+}
+div .modal-content {
+    background-color: transparent;
+    border: none
+}
+
+.modalCustom h3 {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.modalCustom h2.main-text {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+.relative {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.forColorcheckbox input[type=radio]:checked + span .fa-check1:before {
+    content: "\f00c";
+}
+
+.modalCustom p {
+    font-size: 14px;
+    padding-right: 20px;
+}
+
+.modalCustom a {
+    padding: 11px;
+    background: transparent;
+    color: #000;
+    margin-right: 10px;
+    min-width: 140px;
+    display: inline-block;
+    text-align: center;
+    outline: none;
+    -webkit-outline: none;
+    border: 1px solid #000;
+    font-size: 14px;
+    transition: 0.5s ease all;
+}
+
+.modalCustom a:hover {
+    background: #ff7d00;
+    color: #fff;
+    border-color: #fff;
+}
+
+.modalCustom .carousel .control-dots .dot {
+    width: 12px;
+    height: 12px;
+    background: #ff7d00;
+    box-shadow: 0 0 1px 2px rgb(255 255 255 / 90%);
+}
+.modalCustom .carousel.carousel-slider .slide img {
+    width: 100%;
+    vertical-align: top;
+    border: 0;
+    height: 600px;
+    transition-duration: 0.2s;
+    object-fit: cover;
+    object-position: 20%;
+}
+.modal-dialog.edit-mode .modal-header button span{
+    font-weight: 300;
+}
+/* span.tick {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    font-size: 13px;
+    right: 5px;
+    background-color: #fff;
+    bottom: 5px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Poppins';
+}
+
+.forColorcheckbox input[type="radio"] + span {
+    position: relative;
+} */
+
+@media (max-width: 1439px) {
+    .ADD-ONS .form-divmain label {
+        font-size: 9px;
+    }
+
+    .ADD-ONS .form-group.ONscheckbox p {
+        font-size: 9px;
+    }
+    label.w100 >span {
+        font-size: 9px;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+div .modalCustom a {
+    padding: 0;
+    line-height: 32px;
+    margin: 0 5px 0 0;
+}
+}
+
+@media only screen and (max-width: 991px){
+    div .modalCustom a {
+        padding: 0;
+        line-height: 32px;
+        margin: 0 5px 0 0;
+    }
+    
+    .modalCustom h2.main-text {
+        font-size: 26px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    .car-descript h3 {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 5px 0;
+    }
+    div .modal-dialog {
+        width: 100%;
+        max-width: 90%;
+        background: transparent;
+        background-color: transparent;
+        margin: 0 auto;
+    }
+    
+div .modal-header .close {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background: #000;
+    margin: 0;
+    padding: 0;
+    display: block;
+    opacity: 1;
+    color: #fff;
+    font-weight: 100;
+}
+
+
+
+div .modal-dialog.edit-mode .modal-header button span {
+    position: relative;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    font-weight: 100;
+    line-height: 27px;
+}
+
+div .modal-content{
+    border: none;
+}
+
+div .modal-header .close {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    background: #303030;
+    margin: 0;
+    padding: 0;
+    display: block;
+    opacity: 1;
+    color: #fff;
+    font-weight: 100;
+}
+.modal-dialog.edit-mode .modal-header button span{
+    color: #fff;
+}
+.modal-dialog.edit-mode .modal-header button span {
+    font-size: 30px;
+}   
+
+
+
+div .modal-dialog.edit-mode .modal-header button span {
+    position: relative;
+    top: -2px;
+    width: 25px;
+    height: 25px;
+    font-weight: 100;
+    line-height: 27px;
+}
+.ADD-ONS .form-divmain label {
+    font-size: 13px;
+}
+label.w100 >span {
+    font-size: 13px;
+}
+
+.ADD-ONS .form-group.ONscheckbox p {
+    font-size: 13px;
+}
+
+}
+
+@media only screen and (max-width: 767px){
+
+.modalCustom .carousel.carousel-slider .slide img {
+    height: 100%;
+}
+div .modal-body .row.first-row.sec-row {
+    padding: 15px;
+}
+div .modalCustom a {
+    padding: 0;
+    line-height: 32px;
+    margin: 0 5px 5px 0;
+    width: auto;
+}
+div .modalCustom h3
+{
+ margin: 10px 0;
+}
+div .modal-dialog.edit-mode .modal-header button span {
+    font-size: 32px;
+    font-weight: 100;
+    font-family: 'Poppins';
+}
+
+form.ADD-ONS .form-group {
+    padding: 10px 0px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+.oulineS {
+    border: 1px solid #ff7d00;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 30px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+    height: 20px!important;
+    position: relative;
+    transition: all .3s ease;
+    width: 20px;
+}
+  .oulineS:focus::before {
+    content: "";
+    position: absolute;
+   
+        border: 0px solid #ff7d00;
+        border-radius: 20px;
+        bottom: 0px;
+        content: "";
+        left: -3px;
+        position: absolute;
+        right: 0;
+        top: -3px;
+    
+  }
+  div form.models-radio input {
+    border: 0px solid #ff7d00;
+    outline: none;
+}
+div form.models-radio input {
+    appearance: none;
+    -webkit-border-radius: 30px;
+    cursor: pointer;
+    height: 12px!important;
+    position: relative;
+    transition: all .3s ease;
+    width: 12px;
+    margin-left: 3px;
+}
+div form.models-radio input:checked {
+    background-color: #ff7d00;
+}
+
+.checkboxConnectivity input.inp11 {
+    width: 18px;
+}

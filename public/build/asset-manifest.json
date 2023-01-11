@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.66fb6619.css",
+    "main.js": "/static/js/main.614e2a2d.js",
+    "static/js/787.057c5c81.chunk.js": "/static/js/787.057c5c81.chunk.js",
+    "static/media/yellow.png": "/static/media/yellow.e64537ea88fd3cc04b19.png",
+    "static/media/blue.png": "/static/media/blue.64eee51dd8d8d104ce01.png",
+    "static/media/red.png": "/static/media/red.c43e7e40fe10c70abd04.png",
+    "static/media/purple.png": "/static/media/purple.055a6cdf95045e1f5615.png",
+    "static/media/black.png": "/static/media/black.8a6734baab947ebb5369.png",
+    "static/media/car-30984_960_720.png": "/static/media/car-30984_960_720.a7c17e89d7da85b45df6.png",
+    "static/media/wheel3.svg": "/static/media/wheel3.b1a80268d92d2e7ada023f197c89fed1.svg",
+    "static/media/wheel1.svg": "/static/media/wheel1.cfced964a71af3addc6def794bf46395.svg",
+    "static/media/wheel2.svg": "/static/media/wheel2.81efd666c5dcc282009035b5d845fbed.svg",
+    "static/media/carb4.png": "/static/media/carb4.8118404c6b4e8627f3d0.png",
+    "static/media/carb2.png": "/static/media/carb2.9697bac65818de138a07.png",
+    "static/media/carb1.png": "/static/media/carb1.8a1d0f88bc836586673d.png",
+    "index.html": "/index.html",
+    "static/media/pdf.PNG": "/static/media/pdf.f5b3834385002bea1ef2.PNG",
+    "main.66fb6619.css.map": "/static/css/main.66fb6619.css.map",
+    "main.614e2a2d.js.map": "/static/js/main.614e2a2d.js.map",
+    "787.057c5c81.chunk.js.map": "/static/js/787.057c5c81.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66fb6619.css",
+    "static/js/main.614e2a2d.js"
+  ]
+}

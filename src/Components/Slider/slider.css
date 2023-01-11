@@ -1,0 +1,20 @@
+.carousel .thumbs-wrapper {
+    display: none;
+}
+.carousel.carousel-slider .control-arrow {
+    display: none;
+}
+.carousel.carousel-slider .slide img {
+    width: 100%;
+    vertical-align: top;
+    border: 0;
+    height: 580px;
+    transition-duration: none;
+}
+
+.carousel .slider-wrapper.axis-horizontal .slider{
+    transition: opacity 0.2s ease-in-out 0.2s, visibility 0.2s ease-in-out 0.5s;
+    transition-duration: 0.2s !important;
+}
+
+

@@ -1,0 +1,236 @@
+.car-summary h3 {
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #000;
+}
+
+/* .car-summary {
+    padding-top: 200px;
+} */
+.pdf1 span {
+    font-size: 18px;
+    cursor: pointer;
+}
+img.iiSum {
+    height: 22px;
+}
+
+tbody.same-lines tr td:last-child, thead.main-heading tr td:last-child , thead.last-head tr td:last-child {
+    text-align: right;
+}
+
+span#copied {
+    color: #ff7d00;
+    font-weight: 500;
+}
+
+td.same-head:first-child {
+    width: 50%;
+}
+
+td.same-head:nth-child(2) {
+    width: 15%;
+}
+
+td.same-head:nth-child(3) {
+    width: 15%;
+}
+
+td.same-head:last-child {
+    width: 15%;
+}
+table.table.summarytable {
+    width: 85%;
+}
+.table td.same-head {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Poppins';
+    padding: 20px 0px 10px 0px;
+    border: none;
+}
+
+.table tr td {
+    padding: 20px 0px 10px;
+    border: none !important;
+}
+
+.table tbody.same-lines {
+    border-bottom: 1px solid #1e1e1e80;
+}
+
+.table tbody.same-lines td {
+    padding: 10px 0px 10px;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Poppins';
+    color: #000;
+}
+.table .main-heading{
+    border-bottom: 1px solid #1e1e1e80;
+    border-top: none;
+}
+.table thead.last-head {
+    border-bottom: 1px solid #1e1e1e80;
+}
+
+.tables-icons img {
+    padding-right: 25px;
+}
+
+.pdfSection {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 85%;
+}
+
+.pdfSection h3 {
+    font-size: 18px;
+    font-family: 'Poppins';
+    line-height: 21px;
+}
+
+.pdfSection span {
+    color: #7e7d7d;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.pdfSection h4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+        padding-top: 2px;
+}
+.pdfSection .social {
+    margin-left: 5px;
+}
+
+.pdfSection .social ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pdf2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pdfSection .social ul li {
+    width: 25px;
+    margin: 0 2px;
+    background: #858585;
+    text-align: center;
+    height: 25px;
+    padding-top: 1px;
+    border: 0;
+    border-radius: 0;
+}
+.pdfSection .social ul li a {
+    display: contents;
+}
+.pdfSection .social ul li i {
+    color: #fff;
+    font-size: 12px;
+}
+.pdfSection .social ul li:hover {
+
+    background: #FF7D00;
+    border: 0;
+}
+
+.stdBtn{
+padding: 10px;
+background: #FF7D00;
+color: #fff;
+margin: 10px 0;
+min-width:  200px;
+display: inline-block;
+text-align: center;
+outline: none;
+border: 1px solid #fff !important;
+font-size: 16px;
+transition: 0.5s ease all;
+cursor: pointer;
+}
+
+
+.stdBtn:hover {
+    background: #000;
+    color: #fff  !important;
+    border-color: #fff;
+}
+
+img.w-20 {
+    width: 24px;
+}
+.pdf1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menuMain {
+    display: none;
+}
+
+
+@media(max-width: 991px){
+    .pdfSection {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 767px){
+    .pdfSection {
+flex-direction: column;
+    }
+    .pdf2 {
+        display: flex;
+        /* align-items: center; */
+        justify-content: start;
+    
+    }
+    .pdfSection .social ul{
+        justify-content: flex-start;
+    }
+    .pdfSection .social {
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    .pdfSection .social ul li{
+        margin: 0 4px;
+    }
+}
+@media (max-width: 575px) {
+    .pdfSection h4 {
+        font-size: 13px;
+        padding: 9px 5px 0 0;
+    }
+    .pdfSection .social ul {
+        margin-bottom: 0;
+    }
+    
+    .pdfSection .social ul li {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px;
+    }
+    
+    .pdfSection .social ul li i {
+        font-size: 11px;
+    }
+   
+    
+}

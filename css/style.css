@@ -1,0 +1,880 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+  
+    overflow-x: hidden;
+}
+.row.first-row {
+    padding-bottom: 150px;
+}
+header ul.main-menu li a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+}
+footer.foot-2.mobile{
+    display: none;
+}
+.footer .social ul li {
+    cursor: pointer;
+}
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container-1490 {
+    max-width: 1490px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+}
+main {
+    overflow-x: hidden;
+}
+
+a:hover,
+a:focus,
+button:focus,
+.form-control:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+a:focus,
+a:active,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button:focus,
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+/*  */
+header ul.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 0;
+    font-family: 'Poppins';
+}
+.collapse:not(.show) {
+    display: block;
+}
+
+/* mk */
+
+/* ul#myTab {
+    justify-content: center;
+} */
+
+.nav-tabs.main-tabs .nav-item.show .nav-link, .nav-tabs.main-tabs .nav-link.active {
+    color: #FF7D00;
+    background-color: unset;
+    font-family: 'Poppins';
+}
+
+.nav-tabs.main-tabs .nav-link {
+    border: unset;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    color: #121212;
+}
+header li.reserve-btn {
+    background: #FF7D00;
+}
+
+header ul li.reserve-btn a {
+    color: #fff;
+    padding: 10px 40px;
+    display: block;
+}
+header ul.main-menu li {
+    flex: 0 0 12%;
+    text-align: center;
+}
+
+header ul.main-menu li.main-logo {
+    flex: 0 0 50%;
+    text-align: center;
+}
+.mean-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.sec1 {
+    padding-top: 110px;
+}
+
+div#navbarSupportedContent {
+    padding-top: 22px;
+}
+.nav-tabs.main-tabs .nav-link {
+    padding: 15px 35px;
+    /* border-right: 1px solid #A4A4A4; */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+/* identical to box height, or 21px */
+    color: #121212;
+    border-bottom: 1px solid #A4A4A4;
+    transition: all .4s ease;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: 0px;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    border-color: #FF7D00;
+}
+
+ul#myTab {
+        justify-content: center;
+        max-width: 1045px;
+        margin: 0 auto;
+        border-bottom: 0 !important;
+}
+.nav-tabs {
+    border-bottom: 1px solid #A4A4A4;
+}
+/* div#Models-tab h2 {
+    padding-top: 120px;
+} */
+
+/* slider */
+
+.row.first-row button {
+    font-size: 0;
+}
+
+.row.first-row ul.slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.row.first-row li.slick-active {
+    list-style: none;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.row.first-row button {
+    all: unset;
+    background: #fff!important;
+    font-size: 0;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.row.first-row li.slick-active button {
+    background: #FF7D00 !important;
+    width: 11px!important;
+    border-radius: 10px;
+}
+.car-content h3 {
+    font-size: 51px;
+    padding: 30px 0px;
+    font-family: 'Poppins';
+    color: #000;
+    font-weight: 600;
+}
+
+.main-tabs {
+    margin-bottom: 140px !important;
+}
+.accordion {
+    max-width: 500px;
+    margin: 0 auto;
+}
+  div#navbarSupportedContent {
+    display: block;
+}
+.accordion__title {
+font-family: 'industry', sans-serif;
+font-weight: 300;
+color: #fff;
+text-transform: uppercase;
+font-size: 1.125em;
+}
+.accordion__list {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.accordion__item {
+
+visibility: hidden;
+}
+.accordion__item:last-child {
+border-bottom: 0;
+}
+.accordion__item.is-active .accordion__itemTitleWrap::after {
+-webkit-transform: translateX(-20%);
+        transform: translateX(-20%);
+}
+.accordion__item.is-active .accordion__itemIconWrap {
+-webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+}
+.accordion__itemTitleWrap {
+    height: 3.5em;
+    height: 2.5em;
+    height: 2.5em;
+    align-items: center;
+    padding: 0 0em;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.accordion__itemTitleWrap::after {
+    border-bottom: 1px solid #d3d3d3;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    z-index: 1;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease;
+}
+.accordion__itemTitleWrap.is-active::after, .accordion__itemTitleWrap:hover::after {
+-webkit-transform: translateX(-20%);
+        transform: translateX(-20%);
+}
+.accordion__itemIconWrap {
+    width: 1.25em;
+    height: 1.25em;
+    margin-left: auto;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    color: black;
+}
+.accordion__itemTitle {
+margin: 0;
+font-family: 'industry', sans-serif;
+font-weight: 300;
+font-size: 1em;
+position: relative;
+z-index: 10;
+}
+.accordion__itemContent {
+    font-size: 0.875em;
+    height: auto;
+    overflow: hidden;
+    padding: 0 0;
+}
+.accordion__itemContent p {
+margin: 2em 0;
+}
+.main-tabs li.nav-item:last-child .nav-link {
+    border-right: 0;
+}
+h3.accordion__itemTitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+/* or 36px */
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.nav-tabs {
+    border-bottom: 2px solid #A4A4A4 !important;
+}
+
+/* form in acc */
+
+.form-group.forColorRadio {
+    PADDING: 20PX 0PX 20PX 0PX;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: unset !important;
+}
+
+.forColorcheckbox input[type="radio"] {
+    display: none;
+    width: auto;
+}
+
+.forColorcheckbox label {
+    width: 100%;
+    flex: 0 0 21%;
+    flex-wrap: wrap;
+}
+
+.forColorcheckbox input[type="radio"]:checked + span {
+    font-size: 32px;
+}
+
+.forColorcheckbox input[type="radio"] + span {
+    width: 100%;
+    height: 85px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    margin: 0 !important;
+} 
+
+.form-group.forColorcheckbox {
+    padding: 30px 0px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+label.red input[type="radio"] + span {
+    background: #DB301F;
+}
+label.blue input[type="radio"] + span {
+    background: #11328F;
+}
+label.yellow input[type="radio"] + span {
+    background: #F1B640;
+}
+label.purple input[type="radio"] + span {
+    background: #271257;
+}
+label.grey input[type="radio"] + span {
+    background: #8C918D;
+}
+label.white input[type="radio"] + span {
+    background: #F3F3F3;
+}
+label.green input[type="radio"] + span {
+    background: #004225;
+}
+label.black input[type="radio"] + span {
+    background: #000;
+}
+label.lightgrey input[type="radio"] + span {
+    background: #E0DBD1;
+}
+
+/* input[type='radio']:after {
+    width: 20px;
+    height:20px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid orange;
+} */
+
+/* .form-group.forColorRadio input[type='radio']:checked:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+} */
+
+h2.main-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+    color: #000;
+}
+
+.form-group.forColorRadio label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 150%;
+    padding-left: 12px;
+    color: #000;
+    margin-bottom: 0 !important;
+    
+}
+.accordion__itemIconWrap svg {
+    filter: brightness(0);
+}
+.forColorcheckbox.wheel input[type="radio"] + span{
+    background-color: transparent;
+    height: 100px;
+}
+.form-group.ADDONcheckbox .form-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group.ADDONcheckbox .checkbox-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-group.ADDONcheckbox .checkbox-text label {
+    margin: 0;
+}
+.form-divmain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-divmain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-divmain .checkbox-texts {
+    gap: 21px;
+    display: flex;
+}
+
+.form-divmain img {
+    padding-left: 15px;
+}
+
+.form-divmain label {
+    margin: 0;
+    font-size: 12px;
+    font-family:'poppins';
+    color: #000;
+    font-weight: 500;
+}
+.form-group.ONscheckbox p {
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: 12px;
+    color: #000;
+    font-weight: 500;
+}
+
+form.ADD-ONS .form-group {
+    padding: 8px 0px;
+    border-bottom: 1px solid #969696;
+    margin: 0;
+}
+.form-group.ADDONcheckbox {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    padding: 16px 0px 10px !important;
+}
+
+.checkboxConnectivity {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.checkboxConnectivity label {
+    margin: 0;
+}
+
+.checkboxMaintenance label {
+    margin: 0;
+}
+
+.checkboxMaintenance {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+.table td.same-head {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Poppins';
+    padding: 20px 0px 10px 0px;
+    border: none;
+}
+
+.table tr td {
+    padding: 20px 0px 10px;
+    border: none !important;
+}
+
+.table tbody.same-lines {
+    border-bottom: 1px solid #1e1e1e80;
+}
+
+.table tbody.same-lines td {
+    padding: 10px 0px 10px;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Poppins';
+    color: #000;
+}
+.table .main-heading{
+    border-bottom: 1px solid #1e1e1e80;
+    border-top: none;
+}
+.table thead.last-head {
+    border-bottom: 1px solid #1e1e1e80;
+}
+.car-summary h3 {
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #000;
+}
+
+.car-summary {
+    padding-top: 200px;
+}
+.tables-icons img {
+    padding-right: 25px;
+}
+footer.footer {
+    background-image: url(../assets/footerbackgrouond.png);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.footer-links ul.footer-nav li a {
+    color: #ffff;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 3em;
+}
+.footer-links h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Poppins';
+    padding-bottom: 15px;
+}
+footer.foot-2 .row .col-6:last-child {
+    text-align: right;
+}
+
+footer.foot-2.desktop .row .col-lg-6 p {
+    margin: 0;
+    padding: 20px 0px;
+    font-family: 'Poppins';
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer .social ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.footer .social ul li a i {
+    color: #fff;
+}
+
+.footer-sm-log {
+    padding-bottom: 50px;
+}
+.cocoon {
+    appearance: none;
+    width: 20px;
+    height: 20px !important;
+    border: 1px solid #FF7D00;
+}
+
+input.inp11 {
+    appearance: none;
+    width: 20px;
+    height: 20px !important;
+    border: 1px solid #FF7D00;
+    position: relative;
+}
+input.inp11::before{
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    display: none;
+    top: 0px;
+    font-size: 15px;
+    left: 3px;
+    position: absolute;
+}
+input.inp11:checked::before{
+    display: block;
+    color: #fff;
+}
+input.inp11:checked {
+    background: #ff7d00;
+}
+.footer .social ul li {
+    background: transparent;
+    border-radius: 30px;
+    border: 2px solid #ffff;
+    width: 50px;
+    height: 50px;
+    transition: all ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.footer .social ul li:hover {
+    background: #FF7D00;
+    border: 2px solid #FF7D00;
+}
+
+tbody.same-lines tr td:last-child, thead.main-heading tr td:last-child , thead.last-head tr td:last-child {
+    text-align: right;
+}
+
+td.same-head:first-child {
+    width: 50%;
+}
+
+td.same-head:nth-child(2) {
+    width: 15%;
+}
+
+td.same-head:nth-child(3) {
+    width: 15%;
+}
+
+td.same-head:last-child {
+    width: 15%;
+}
+table.table.summarytable {
+    width: 85%;
+}
+.footer-links ul.footer-nav li a:hover {
+    color: #FF7D00;
+    text-decoration: none;
+}
+
+.footer-links ul.footer-nav li a {
+    transition: all ease 0.5s;
+}
+.form-divmain .checkbox-texts {
+    align-items: center;
+}
+header ul.main-menu li a:hover {
+    text-decoration: none;
+}
+.nav-tabs .nav-link:hover {
+    border-color: #FF7D00 !important;
+    color: #FF7D00;
+}
+.tab-mobile-tb {
+    display: none;
+}
+.mobile a {
+    display: none;
+}
+
+
+.car-descript h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 180%;
+/* or 32px */
+    letter-spacing: -0.06em;
+    color: #252525;
+}
+
+.car-descript p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 180%;
+/* or 22px */
+    letter-spacing: -0.06em;
+    color: #6C6C6C;
+    width: 76%;
+}
+.car-descript-btn a {
+    background: #FF7D00;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 45px;
+/* identical to box height, or 21px */
+    text-align: center;
+    color: #FFFFFF;
+    width: 153px;
+    height: 45px;
+    text-decoration: none;
+    display: block;
+}
+
+.car-descript-btn {
+    display: flex;
+    gap: 30px;
+}
+
+.car-descript-btn a:last-child {
+    border: 1px solid black;
+    background: transparent;
+    color: black;
+}
+.modal-dialog.edit-mode {
+    max-width: 80%;
+    margin: 1.75rem auto;
+}
+.modal-slider img {
+    height: 700px;
+}
+.row.first-row.sec-row {
+    width: 95%;
+    margin: 0 auto;
+}
+.row.first-row.sec-row .col.lg-6.m-auto {
+    padding-left: 60px;
+}
+.modal-dialog.edit-mode .modal-header {
+    border: none;
+    padding: 0 16px;
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+}
+
+.modal-dialog.edit-mode .modal-header button span {
+    font-size: 50px;
+    padding: 0 0;
+}
+
+.modal-dialog.edit-mode .modal-body {
+    background: #F8F0E3;
+    padding: 50px 0;
+}
+
+.row.first-row.sec-row {
+    padding-bottom: 0;
+}
+
+.car-descript-btn a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.car-descript-btn a:last-child:hover {
+    color: black;
+}
+
+form.models-radio input{
+    appearance: none;
+    width: 15px;
+    height: 15px !important;
+    outline: 1px solid #FF7D00;
+    position: relative;
+    border-radius: 30px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+form.models-radio input:checked {
+    background-color: #ff7d00;
+    outline-offset: 3px;
+    transform: scale(0.8);
+}
+
+form.models-radio .form-group.forColorRadio {
+    PADDING: 20PX 0PX 20PX 6PX;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color: unset;
+}
+ul#myTab li.nav-item {
+    border-right: 1px solid #A4A4A4 !important;
+    border-bottom: none;
+}
+ul#myTab li.nav-item {
+    flex: 1;
+    text-align: center;
+}
+ul#myTab li.nav-item:hover {
+    /* border-bottom: 1px solid #ff7d00; */
+}
+
+ul#myTab li.nav-item:last-child {
+    border-right: none !important;
+}
+
+.checkboxConnectivity img {
+    margin-left: 16px;
+}
+
+.checkbox-text img {
+    margin-left: 16px;
+}
+
+.checkboxMaintenance img {
+    margin-left: 16px;
+}
+.car-descript h3 {
+    margin-bottom: 0;
+}
+.flx-both {
+    display: flex;
+    align-items: center;
+}
