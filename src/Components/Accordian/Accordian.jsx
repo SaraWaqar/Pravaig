@@ -228,7 +228,7 @@ const Accordian = () => {
     setdata(dataModify);
     handleShow()
   };
-  let baseUrl = `http://192.168.0.179:3700/`;
+  let baseUrl = `http://45.32.70.221/api/`;
   const handleSlides = (item) => {
     setExteriorColor({ name: "carbonedition", color: item?.color })
     setImage(item?.mainImage);
