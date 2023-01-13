@@ -41,9 +41,6 @@ const Accordian = () => {
   const [data, setData] = useState([]);
 
   const [show, setShow] = useState(false);
-
-
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [showY, setShowY] = useState(false);
@@ -54,11 +51,6 @@ const Accordian = () => {
 
 
   const [addonItems, setAddonItems] = useState({});
-
-
-
-
-
 
   const tabs = params.get("tab");
   // console.log(tabs, "tabss");
@@ -221,9 +213,7 @@ const Accordian = () => {
     
   }
 
-
-
-  const handleCheckAddon = (selectedItem, data, setdata) => {
+ const handleCheckAddon = (selectedItem, data, setdata) => {
 
     const dataModify = data.map((elem) => {
       if (elem === selectedItem) {
@@ -355,7 +345,7 @@ const Accordian = () => {
                         <input type="radio" name="gender" id={index} onClick={() =>/* setImage(item?.mainImage) */ handleSlides(item)} />
                         <span
                           style={{
-                            backgroundImage: `url(${baseUrl + item?.color})`,
+                              backgroundImage: `url(${baseUrl + item?.color})`,
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover",
                             

@@ -29,6 +29,14 @@
 button.accordion-button .accordion__itemIconWrap {
     transform: rotate(0deg);
 }
+input#\39 ~ img {
+    display: none;
+}
+
+input#\37 ~ img {
+    display: none;
+}
+
 
 button.accordion-button.collapsed .accordion__itemIconWrap {
     transform: rotate(180deg);

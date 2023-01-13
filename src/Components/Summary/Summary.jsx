@@ -43,18 +43,18 @@ const Summary = () => {
                 <td></td>
                 <td>INR 63,400</td>
               </tr>
-              <tr>
+              {/* <tr>
                 <td scope="">Price for Equipment</td>
                 <td></td>
                 <td></td>
                 <td>INR 600</td>
-              </tr>
-              <tr>
+              </tr> */}
+              {/* <tr>
                 <td scope="">Delivery, Processing and Handling Fee</td>
                 <td></td>
                 <td></td>
                 <td>INR 1,450</td>
-              </tr>
+              </tr> */}
               <tr>
                 <td scope="">Total Price*</td>
                 <td></td>

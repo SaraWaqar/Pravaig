@@ -23,7 +23,7 @@ const ReduxData = () => {
           name="quantity"
           type="text"
           className="quantity__input"
-          value={myState}
+          //value={myState}
         />
         <button
           className="quantity__plus"
