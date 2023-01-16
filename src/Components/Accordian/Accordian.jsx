@@ -56,6 +56,8 @@ const Accordian = () => {
   // console.log(tabs, "tabss");
   const [tab, setTab] = useState("0");
 
+  
+
   useEffect(() => {
     if (tabs) {
       setTab(tabs);
@@ -239,7 +241,9 @@ const Accordian = () => {
       <Accordion onSelect={(eventkey) => setTab(eventkey)} activeKey={tab}>
         <Element name="model">
           <Accordion.Item eventKey="0">
-            <Accordion.Header>
+            <Accordion.Header onClick={() => {              
+                setParams({ tab: "0" });
+              }} >
               <h3 className="accordion__itemTitle">MODELS </h3>
               <div className="accordion__itemIconWrap">
                 <svg viewBox="0 0 24 24">
@@ -276,7 +280,10 @@ const Accordian = () => {
 
         <Accordion.Item eventKey="1">
           <Element name="excolor">
-            <Accordion.Header>
+            <Accordion.Header onClick={() => {
+              
+              setParams({ tab: "1" });
+            }}>
               <h3 className="accordion__itemTitle">Exterior Colours</h3>
               <div className="accordion__itemIconWrap">
                 <svg viewBox="0 0 24 24">
@@ -322,7 +329,9 @@ const Accordian = () => {
 
         <Accordion.Item eventKey="2">
           <Element name="carbon">
-            <Accordion.Header>
+            <Accordion.Header onClick={() => {              
+              setParams({ tab: "2" });
+            }}>
               <h3 className="accordion__itemTitle">Carbon Edition</h3>
               <div className="accordion__itemIconWrap">
                 <svg viewBox="0 0 24 24">
@@ -367,7 +376,9 @@ const Accordian = () => {
 
         <Accordion.Item eventKey="3">
           <Element name="wheels">
-            <Accordion.Header>
+            <Accordion.Header onClick={() => {              
+              setParams({ tab: "3" });
+            }}>
               <h3 className="accordion__itemTitle">WHEELS</h3>
 
               <div className="accordion__itemIconWrap">
@@ -413,7 +424,9 @@ const Accordian = () => {
 
         <Accordion.Item eventKey="4">
           <Element name="incolor">
-            <Accordion.Header>
+            <Accordion.Header onClick={() => {              
+              setParams({ tab: "4" });
+            }}>
               <h3 className="accordion__itemTitle">INTERIOR COLOURS</h3>
 
               <div className="accordion__itemIconWrap">
@@ -460,7 +473,9 @@ const Accordian = () => {
 
         <Accordion.Item eventKey="5">
           <Element name="adson">
-            <Accordion.Header>
+            <Accordion.Header onClick={() => {              
+              setParams({ tab: "5" });
+            }}>
               <h3 className="accordion__itemTitle">ADD ONS</h3>
 
               <div className="accordion__itemIconWrap">
@@ -522,9 +537,6 @@ const Accordian = () => {
                 {
                   addons?.addons?.basic?.map((item, index) => {
                     let des = item?.description?.split("<br>");
-
-
-
                     // keys?.map((item)=>console.log(item))
                     return (
                       <div className="form-group ONscheckbox" key={index}>
@@ -536,7 +548,7 @@ const Accordian = () => {
                               id={index}
                               name={item?.title}
                               onChange={() => {
-                                handleCheckAddon(item, dummyData, setDummyData);
+                               // handleCheckAddon(item, dummyData, setDummyData);
                                 setSelectedAddon(item);
                                 setAddonItems({ ...item, des })
                               }}

@@ -66,7 +66,7 @@ const Summary = () => {
             <thead>
               <tr>
                 <td scope="col" className="same-head">
-                  Exterior Color
+                  Exterior Colour
                 </td>
               </tr>
             </thead>
@@ -109,7 +109,7 @@ const Summary = () => {
             <thead>
               <tr>
                 <td scope="col" className="same-head">
-                  Interior Color
+                  Interior Colour
                 </td>
               </tr>
             </thead>

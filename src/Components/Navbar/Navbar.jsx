@@ -33,7 +33,7 @@ const Navbar = ({ scrollTo }) => {
               }}
             >
               <Link
-                className={`nav-link ${tab === "0" ? "active" : ""}`}
+                className={`nav-link ${tab === "0" || !tab ? "active" : ""}`}
                 data-toggle="tab"
                 role="tab"
                 aria-controls="Models"

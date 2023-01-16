@@ -30,7 +30,7 @@ const DefySection = () => {
                 <Slider />
                 <h2 className="main-text">DEFY</h2>
                 <div className="car-content">
-                  <h3>0.00 INR</h3>
+                  <h3>39,50,000 INR</h3>
                 </div>
                 <div className="summaryDesk">
                   <Element name="summary">

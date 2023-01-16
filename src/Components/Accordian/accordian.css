@@ -13,11 +13,14 @@
 }
 
 .modal-dialog .car-descript {
-    padding: 40px 0;
+    padding:0 0 20px 0;
 }
 
 .modal-dialog .car-descript h2 {
     margin: 30px 0;
+}
+.modal-dialog .row.first-row.sec-row {
+    align-items: center;
 }
 .form-divmain img, .form-div img
 {
@@ -53,9 +56,7 @@ button.accordion-button.collapsed .accordion__itemIconWrap {
     transition: .5s ease-in all;
     border:1px solid transparent    
 }
-.forColorcheckbox.wheel input[type="radio"] + span:hover{
-    border:1px solid #ff7d00
-}
+
 .form-group.ADDONcheckbox .form-div {
     display: flex;
     justify-content: space-between;
@@ -273,16 +274,21 @@ h2.accordion-header {
     position: relative;
 }
 .forColorcheckbox input[type=radio]:checked + span::before {
-    content: '';
+    content: "\f00c";
     background-color: #fff;
-    width: 20px;
-    height: 20px;
     position: absolute;
-    right: 8px;
+    right: 7px;
     bottom: 8px;
     border: 1px solid #fff;
-    border-radius: 20px;
+    border-radius: 29px;
     z-index: 1;
+    font-family: fontAwesome;
+    color: hsl(11deg 100% 62%);
+    padding: 1px 5px;
+    font-size: 12px;
+}
+.fa-check:before{
+    content: none !important;
 }
 span.tick {
     position: absolute;
@@ -416,9 +422,6 @@ div .modal-content {
     height: 100%;
 }
 
-.forColorcheckbox input[type=radio]:checked + span .fa-check1:before {
-    content: "\f00c";
-}
 
 .modalCustom p {
     font-size: 14px;

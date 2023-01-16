@@ -207,7 +207,7 @@ const Topbar = ({ scrollTo }) => {
                   <div className="right-mean">
                     <ul className="main-menu">
                       <li className="reserve-btn">
-                        <Link>Reserve</Link>
+                        <Link to="//pravaig.com/reserve" target="_blank">Reserve</Link>
                       </li>
                       {/* <li className="sideMenu" onClick={handleClick}>
                         <img src={require("../../Assets/img/ham.png")} alt="" />
