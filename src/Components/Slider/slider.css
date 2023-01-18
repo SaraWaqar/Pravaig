@@ -12,9 +12,59 @@
     transition-duration: none;
 }
 
-.carousel .slider-wrapper.axis-horizontal .slider{
+/* .carousel .slider-wrapper.axis-horizontal .slider{
     transition: opacity 0.2s ease-in-out 0.2s, visibility 0.2s ease-in-out 0.5s;
     transition-duration: 0.2s !important;
+} */
+
+div .carousel.carousel-slider .control-arrow, div div .carousel.carousel-slider .control-arrow:hover, div div .carousel.carousel-slider .control-arrow:hover.control-disabled {
+    display: block;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    top: 50% !important;
+    margin: 0;
+    background-color: transparent;
+    background: transparent !important;
+    margin-top: 0;
+    font-size: 20px !important;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    transform: translateY(-50%);
 }
 
 
+.carousel.carousel-slider .control-arrow:hover.control-disabled, ul#myTab .carousel.carousel-slider .control-arrow.control-disabled {
+    color:#FF7D00!important;
+    background: transparent !important;
+}
+
+
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+
+    display: inline-block;
+    border-top: none;
+    border-bottom: none;
+    content: '\f054';
+    font-family: 'FontAwesome';
+    color: #FF7D00;
+    border: none !important;
+    text-align: center;
+    
+}
+
+.carousel .control-prev:before, .carousel.carousel-slider .control-prev:before {
+    content: '\f053';
+}
+
+div .carousel .control-prev.control-arrow {
+    left: 0;
+}
+div .carousel .control-next.control-arrow {
+    right: 0    ;
+}
+
+button.control-arrow.control-disabled, button.control-arrow.control-disabled:before {
+    color: hsla(11,100%,62.2%,0.4) ;
+}

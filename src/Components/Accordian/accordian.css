@@ -395,8 +395,7 @@ div .modal-dialog.edit-mode {
 }
 
 div .modal-dialog {
-    width: 80%;
-    max-width: 80%;
+
     background: transparent;
     background-color: transparent;
 }
@@ -422,10 +421,19 @@ div .modal-content {
     height: 100%;
 }
 
-
+input#\31 0 ~ img {
+    display: none;
+}   
 .modalCustom p {
     font-size: 14px;
-    padding-right: 20px;
+
+
+}
+.wheel label ~ span {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    flex: 0 0 97px;
 }
 
 .modalCustom a {
@@ -464,8 +472,22 @@ div .modal-content {
     object-fit: cover;
     object-position: 20%;
 }
+
+.modalWithImg .col.imgModal {
+    display: block;
+}
+
+.col.imgModal {
+    display: none;
+}
+.carousel.carousel-slider button.control-arrow.control-disabled::before {
+    color: rgb(255 125 0 / 30%);
+}
 .modal-dialog.edit-mode .modal-header button span{
     font-weight: 300;
+}
+.modalWithImg .modal-dialog{
+    max-width: 90% !important;
 }
 /* span.tick {
     width: 18px;
@@ -525,8 +547,7 @@ div .modalCustom a {
         margin: 5px 0;
     }
     div .modal-dialog {
-        width: 100%;
-        max-width: 90%;
+
         background: transparent;
         background-color: transparent;
         margin: 0 auto;
@@ -607,12 +628,17 @@ label.w100 >span {
 }
 
 @media only screen and (max-width: 767px){
-
+    .modalCustom a{
+        min-width: 110px;
+    }
+    .modal-dialog{
+        width: 90%;
+    }
 .modalCustom .carousel.carousel-slider .slide img {
     height: 100%;
 }
 div .modal-body .row.first-row.sec-row {
-    padding: 15px;
+    padding: 0;
 }
 div .modalCustom a {
     padding: 0;

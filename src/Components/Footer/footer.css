@@ -198,3 +198,31 @@ footer.foot-2.desktop {
     padding: 15px 0;
 }
 /* hamza css  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .inr-popup .col-lg-6.col-md-6 {
+    display: none;
+}
+ */
+
+.modal-body.inr-popup {
+    text-align: center;
+}
+div div .modal-dialog {
+    min-width: 500px;
+    max-width: 500px;
+}
+.fade.modalWithImg.modal .col {
+    text-align: left;
+} 

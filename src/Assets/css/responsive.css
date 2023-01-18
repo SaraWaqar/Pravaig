@@ -10,7 +10,7 @@
     }
 
     .car-descript p {
-        width: 96%;
+        width: 100%;
     }
 
     .container-1490 {
@@ -1253,8 +1253,8 @@
         max-width: 96%;
     }
 
-    .row.first-row.sec-row {
-        width: 100%;
+    .inr-popup .row.first-row.sec-row {
+        display: block;
     }
 
     .car-descript h3 {
@@ -1289,6 +1289,10 @@
     .accordion img {
         width: 20px !important;
     }
+    div div .modal-dialog {
+        min-width: 100%;
+        max-width: 100%;
+    }
    
 
 }
@@ -1299,7 +1303,13 @@
         margin: 15px 0;
         font-size: 18px;
     }
-
+    .wheel label ~ span {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        flex: 0 0 120px;
+        text-align: left;
+    }
     /* .mblNavBar.main-tabs li.nav-item:last-child .nav-link {
         border-right: 1px solid #c4c4c4;
          
@@ -1626,7 +1636,7 @@
     }
 
     .forColorcheckbox label {
-        flex: 0 0 22%;
+        flex: 0 0 30%;
     }
 
     .carousel.carousel-slider .slide img {
