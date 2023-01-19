@@ -14,6 +14,7 @@ import {
   scroller,
 } from "react-scroll";
 
+
 const DefySection = () => {
   return (
     <div className="defySec">

@@ -13,7 +13,7 @@ const MainModal = (props) => {
 
   return (
     <>
-      {/* <Modal show={props.show} onHide={props.onHide} className={`${props.imgModal ? 'modalWithImg' : '' }`}>
+      <Modal show={props.show} onHide={props.onHide} className={`${props.imgModal ? 'modalWithImg' : '' }`}>
         <div className="modalCustom">
           <div className="modal-dialog edit-mode" role="document">
             <div className="modal-content">
@@ -43,8 +43,8 @@ const MainModal = (props) => {
                   <div className="col txtModal">
                     <div className="car-descript">
                       <h2>{props.text?.title} </h2>
-                      {props.text?.des?.map((i) => {
-                        return <p className="main-text">{i}</p>
+                      {props.text?.des?.map((i, index) => {
+                        return <p key={index} className="main-text">{i}</p>
                       })}
                   </div>
 
@@ -64,7 +64,7 @@ const MainModal = (props) => {
             </div>
           </div>
         </div>
-      </Modal> */}
+      </Modal>
     </>
   );
 };

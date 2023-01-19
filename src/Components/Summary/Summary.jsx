@@ -1,10 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./summary.css";
+import { UseSlider } from "../../Hooks/UseSlider";
+
 
 const Summary = () => {
-  // variable to store the data to be copied.
+  const { colorSwitch, addons, setImage, radioHandle, addCarsImgs, objectDetail, addonsArray, summaryData, selectedAddon } = UseSlider();
   const text = " hsge2555jh";
+  const [modelDetail, setModelDetail] = useState(null);
+  const [addonsList, setaddonsList] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [netTotal, setNetTotal] = useState(0);
+  useEffect(() => {
+    console.log(addonsArray, "sajid");
+   
+    
+    let totalamount = 0
+  
+    if (addonsArray.length !== 0) {
+      addonsArray.forEach(item => {
+        totalamount += parseFloat(item.price.split(",").join(""));
+      });
+    }
+    setTotal(totalamount);
+    
+    let list = addonsArray.map((item) => {
+      return (item?.title)
+    })
+    console.log(list, "jajaj")
+    setaddonsList(list);
+    if (addons.length !== 0) {
+      let i = addons?.models?.findIndex(x => x?.car === summaryData);
+      console.log(addons, "aaa")
+      setModelDetail(addons?.models[i]);
+    }
+  }, [addons, summaryData, addonsArray,objectDetail])
 
+  console.log(objectDetail)
+  let net = 0
+  const values = Object.values(objectDetail);
+  if (values.length !== 0) {
+    values.forEach(item => {
+      net += parseFloat(item.price.split(",").join(""));
+    });
+  }
   return (
     <div className="summaryContainer">
       <div className="desktop-tb summarymbl1">
@@ -38,10 +76,13 @@ const Summary = () => {
             </thead>
             <tbody className="same-lines">
               <tr>
-                <td scope="">Base Price 718 Cayman</td>
-                <td>982120</td>
+                <td scope="">Base Price {summaryData}</td>
+                <td>{modelDetail?.code}</td>
                 <td></td>
-                <td>INR 63,400</td>
+                <td>INR {modelDetail?.price}</td>
+                {/* <td>982120</td>
+                <td></td>
+                <td>INR 63,400</td> */}
               </tr>
               {/* <tr>
                 <td scope="">Price for Equipment</td>
@@ -59,7 +100,7 @@ const Summary = () => {
                 <td scope="">Total Price*</td>
                 <td></td>
                 <td></td>
-                <td>INR 65,450</td>
+                <td>INR {modelDetail?.price}</td>
               </tr>
             </tbody>
 
@@ -72,8 +113,8 @@ const Summary = () => {
             </thead>
             <tbody className="same-lines">
               <tr>
-                <td scope="">Black</td>
-                <td>0Q</td>
+                <td scope="">{objectDetail?.exteriorcolors?.name}</td>
+                <td>{objectDetail?.exteriorcolors?.code}</td>
                 <td>
                   {/* <div className="tables-icons">
                     <img
@@ -84,7 +125,7 @@ const Summary = () => {
                     <img src={require("../../Assets/img/pen.png")} alt="" />
                   </div> */}
                 </td>
-                <td>INR 0</td>
+                <td>INR {objectDetail?.exteriorcolors?.price}</td>
               </tr>
             </tbody>
 
@@ -97,12 +138,12 @@ const Summary = () => {
             </thead>
             <tbody className="same-lines">
               <tr>
-                <td scope="">18" Boxster Wheels</td>
-                <td>395</td>
+                <td scope="">{objectDetail?.wheel?.name}</td>
+                <td>{objectDetail?.wheel?.code}</td>
                 <td>
 
                 </td>
-                <td>INR 600</td>
+                <td>INR {objectDetail?.wheel?.price}</td>
               </tr>
             </tbody>
 
@@ -115,12 +156,12 @@ const Summary = () => {
             </thead>
             <tbody className="same-lines">
               <tr>
-                <td scope="">Standard Brown</td>
-                <td>AG</td>
+                <td scope="">{objectDetail?.interiorcolors?.color}</td>
+                <td>{objectDetail?.interiorcolors?.code}</td>
                 <td>
 
                 </td>
-                <td>INR 0</td>
+                <td>INR {objectDetail?.interiorcolors?.price}</td>
               </tr>
             </tbody>
 
@@ -133,12 +174,12 @@ const Summary = () => {
             </thead>
             <tbody className="same-lines">
               <tr>
-                <td scope="">Included First Year / 10,000 Mile Maintenance</td>
+                <td scope="">{addonsList.join('/')}</td>
                 <td>Z1S</td>
                 <td>
 
                 </td>
-                <td>INR 0</td>
+                <td>INR {total.toLocaleString('en-US')}</td>
               </tr>
             </tbody>
 
@@ -150,7 +191,7 @@ const Summary = () => {
                 <td></td>
                 <td></td>
                 <td scope="col" className="same-head">
-                  INR 65,450
+                  INR {(net+total+parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')}
                 </td>
               </tr>
             </thead>
@@ -164,11 +205,8 @@ const Summary = () => {
             Unique code:
             <span
               onClick={() => {
-              
                 navigator.clipboard.writeText(text);
-                document.getElementById("copied").innerHTML = "  copied!"      
-
-                
+                document.getElementById("copied").innerHTML = "  copied!"
               }}
             >
               {text}

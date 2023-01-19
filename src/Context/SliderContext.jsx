@@ -13,14 +13,14 @@ const SliderProvider = ({ children }) => {
   const [addons, setAddons] = useState([]);
   const [imagesData, setImagesData] = useState([]);
 
-  const [imgState, setImgState] = useState([])
-  const [selectedCarObj, setSelectedCarObj] = useState({});
+  const [objectDetail, setObjectDetail] = useState({})
+  const [addonsArray, setAddonsArray1] = useState([])
   const [selectedCars, setSelectedCars] = useState([{ key: 'exteriorcolors', value: 'upload/image_1672916403764.jpg' }]);
-
+  const [summaryData, setSummaryData] = useState('defy')
+  console.log("faizan", addonsArray);
 
   useEffect(() => {
     fetchData();
-
   }, []);
 
   let baseUrl = `http://45.32.70.221/api/`;
@@ -39,20 +39,18 @@ const SliderProvider = ({ children }) => {
       key: key,
       value: image,
     }
-
-   
-
-
     if (key === 'carbonedition' || key === 'exteriorcolors') {
       if (key === 'carbonedition') {
         const newUser = selectedCars.filter((i, e) => i.key !== 'exteriorcolors' && i.key !== 'carbonedition')
         setSelectedCars([...newUser, obj])
       }
+
       else {
         const newUser = selectedCars.filter((i, e) => i.key !== 'carbonedition' && i.key !== 'exteriorcolors')
         setSelectedCars([...newUser, obj])
       }
     }
+
     else {
       let index = selectedCars.findIndex(item => item.key === key);
       if (index > -1) {
@@ -64,16 +62,30 @@ const SliderProvider = ({ children }) => {
       }
     }
   }
-  console.log("selectedCars", selectedCars);
-
-
-  const colorSwitch = (param, key) => {
+  const colorSwitch = (param, key, item) => {
+    // setAddonsArray1(["abcsd"])
+    let object = objectDetail;
+    object[key] = item;
+    setObjectDetail(object);
     setImage(imagesData[param]?.mainImage);
     addCarsImgs(key, imagesData[param]?.mainImage)
-    
   };
 
+  const handleAddonsArray = (e) => {
+    setAddonsArray1([...e])
+  }
+
+  //summary defy selection
+  const radioHandle = (e) => {
+    setSummaryData(e.target.value)
+
+  }
+
+
   const values = {
+    setAddonsArray1,
+    addonsArray,
+    objectDetail,
     image,
     colorSwitch,
     sliderNum,
@@ -82,7 +94,9 @@ const SliderProvider = ({ children }) => {
     imagesData,
     selectedCars,
     setSelectedCars,
-    addCarsImgs
+    addCarsImgs,
+    radioHandle,
+    summaryData
   };
 
   return (
