@@ -1,11 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import Services from "../Services/Services";
 const SliderContext = createContext();
-const img1 = require("../Assets/img/red.png");
-const img2 = require("../Assets/img/yellow.png");
-const img3 = require("../Assets/img/purple.png");
-const img4 = require("../Assets/img/blue.png");
-const img5 = require("../Assets/img/black.png");
 
 const SliderProvider = ({ children }) => {
   const [sliderNum, setSliderNum] = useState(0);
@@ -16,7 +11,7 @@ const SliderProvider = ({ children }) => {
   const [objectDetail, setObjectDetail] = useState({})
   const [addonsArray, setAddonsArray1] = useState([])
   const [selectedCars, setSelectedCars] = useState([{ key: 'exteriorcolors', value: 'upload/image_1672916403764.jpg' }]);
-  const [summaryData, setSummaryData] = useState('defy')
+  const [summaryData, setSummaryData] = useState('defy for fleet')
   console.log("faizan", addonsArray);
 
   useEffect(() => {

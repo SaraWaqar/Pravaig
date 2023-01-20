@@ -19,6 +19,9 @@ img.iiSum {
 tbody.same-lines tr td:last-child, thead.main-heading tr td:last-child , thead.last-head tr td:last-child {
     text-align: right;
 }
+.pdf1 span {
+    margin: 0 7px;
+}
 
 span#copied {
     color: #ff7d00;

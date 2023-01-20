@@ -5,49 +5,57 @@ import { UseSlider } from "../../Hooks/UseSlider";
 
 const Summary = () => {
   const { colorSwitch, addons, setImage, radioHandle, addCarsImgs, objectDetail, addonsArray, summaryData, selectedAddon } = UseSlider();
-  const text = " hsge2555jh";
   const [modelDetail, setModelDetail] = useState(null);
   const [addonsList, setaddonsList] = useState([]);
   const [total, setTotal] = useState(0);
   const [netTotal, setNetTotal] = useState(0);
   useEffect(() => {
     console.log(addonsArray, "sajid");
-   
-    
+
+
     let totalamount = 0
-  
+
     if (addonsArray.length !== 0) {
       addonsArray.forEach(item => {
         totalamount += parseFloat(item.price.split(",").join(""));
       });
     }
     setTotal(totalamount);
-    
+
     let list = addonsArray.map((item) => {
       return (item?.title)
     })
-    console.log(list, "jajaj")
+    //console.log(list, "jajaj")
     setaddonsList(list);
     if (addons.length !== 0) {
       let i = addons?.models?.findIndex(x => x?.car === summaryData);
-      console.log(addons, "aaa")
+      //console.log(addons, "aaa")
       setModelDetail(addons?.models[i]);
     }
-  }, [addons, summaryData, addonsArray,objectDetail])
+  }, [addons, summaryData, addonsArray, objectDetail])
 
-  console.log(objectDetail)
+  // console.log("objectDetail", objectDetail)
   let net = 0
   const values = Object.values(objectDetail);
   if (values.length !== 0) {
     values.forEach(item => {
-      net += parseFloat(item.price.split(",").join(""));
+      net += parseFloat(item.price?.split(",").join(""));
     });
   }
+
+
+
+
+  const arrCode = []
+  arrCode.push(modelDetail?.code, objectDetail?.exteriorcolors?.code, objectDetail?.wheel?.code, objectDetail?.interiorcolors?.code)
+  const text =arrCode.join("");
+
   return (
     <div className="summaryContainer">
       <div className="desktop-tb summarymbl1">
         <div className="car-summary">
           <h3>SUMMARY</h3>
+         
         </div>
 
         <div className="table-responsive" style={{ overflowX: "auto" }}>
@@ -78,27 +86,6 @@ const Summary = () => {
               <tr>
                 <td scope="">Base Price {summaryData}</td>
                 <td>{modelDetail?.code}</td>
-                <td></td>
-                <td>INR {modelDetail?.price}</td>
-                {/* <td>982120</td>
-                <td></td>
-                <td>INR 63,400</td> */}
-              </tr>
-              {/* <tr>
-                <td scope="">Price for Equipment</td>
-                <td></td>
-                <td></td>
-                <td>INR 600</td>
-              </tr> */}
-              {/* <tr>
-                <td scope="">Delivery, Processing and Handling Fee</td>
-                <td></td>
-                <td></td>
-                <td>INR 1,450</td>
-              </tr> */}
-              <tr>
-                <td scope="">Total Price*</td>
-                <td></td>
                 <td></td>
                 <td>INR {modelDetail?.price}</td>
               </tr>
@@ -191,7 +178,7 @@ const Summary = () => {
                 <td></td>
                 <td></td>
                 <td scope="col" className="same-head">
-                  INR {(net+total+parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')}
+                  INR {(net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')}
                 </td>
               </tr>
             </thead>
@@ -211,7 +198,7 @@ const Summary = () => {
             >
               {text}
               <img src={require("../../Assets/img/pdf.png")} className="w-20" />
-              <span id="copied"> </span>
+              <span id="copied">  </span>
             </span>
           </h3>
           <a className="stdBtn">Download PDF</a>
