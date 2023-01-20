@@ -510,9 +510,9 @@
         font-size: 15px;
     }
 
-    .carousel.carousel-slider .slide img {
+    /* .carousel.carousel-slider .slide img {
         height: 470px;
-    }
+    } */
 
     .pdfSection h3 {
         font-size: 16px;
@@ -540,9 +540,9 @@
         left: 0px;
     }
 
-    .carousel.carousel-slider .slide img {
+    /* .carousel.carousel-slider .slide img {
         height: 410px;
-    }
+    } */
 
     .pdfSection h3,
     .pdfSection h4,
