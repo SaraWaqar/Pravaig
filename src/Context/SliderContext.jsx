@@ -7,13 +7,11 @@ const SliderProvider = ({ children }) => {
   const [image, setImage] = useState('');
   const [addons, setAddons] = useState([]);
   const [imagesData, setImagesData] = useState([]);
-
+  const [isActive, setIsActive] = useState(false);
   const [objectDetail, setObjectDetail] = useState({})
   const [addonsArray, setAddonsArray1] = useState([])
   const [selectedCars, setSelectedCars] = useState([{ key: 'exteriorcolors', value: 'upload/image_1672916403764.jpg' }]);
-  const [summaryData, setSummaryData] = useState('defy for fleet')
-  console.log("faizan", addonsArray);
-
+  const [summaryData, setSummaryData] = useState('Defy')
   useEffect(() => {
     fetchData();
   }, []);
@@ -72,9 +70,17 @@ const SliderProvider = ({ children }) => {
 
   //summary defy selection
   const radioHandle = (e) => {
-    setSummaryData(e.target.value)
+    setSummaryData(e.target.value);
+    if (e.target.value === 'defy for fleet') {
+      setIsActive(true)
+    }
+    else{
+      setIsActive(false)
 
+    }
   }
+
+
 
 
   const values = {
@@ -91,7 +97,8 @@ const SliderProvider = ({ children }) => {
     setSelectedCars,
     addCarsImgs,
     radioHandle,
-    summaryData
+    summaryData,
+    isActive
   };
 
   return (

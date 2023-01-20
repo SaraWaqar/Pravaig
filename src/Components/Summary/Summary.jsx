@@ -4,17 +4,21 @@ import { UseSlider } from "../../Hooks/UseSlider";
 
 
 const Summary = () => {
-  const { colorSwitch, addons, setImage, radioHandle, addCarsImgs, objectDetail, addonsArray, summaryData, selectedAddon } = UseSlider();
+  const { colorSwitch, addons, setImage, radioHandle, isActive, objectDetail, addonsArray, summaryData, selectedAddon } = UseSlider();
   const [modelDetail, setModelDetail] = useState(null);
   const [addonsList, setaddonsList] = useState([]);
   const [total, setTotal] = useState(0);
   const [netTotal, setNetTotal] = useState(0);
+
+  const [countQuantity, setCountQuantity] = useState(1);
+  const [unitsPrice, setUnitsPrice] = useState(3950000)
+  const [calculateQ, setcalculateQ] = useState(3950000)
+
+
+
   useEffect(() => {
-    console.log(addonsArray, "sajid");
-
-
+    //console.log(addonsArray, "sajid");
     let totalamount = 0
-
     if (addonsArray.length !== 0) {
       addonsArray.forEach(item => {
         totalamount += parseFloat(item.price.split(",").join(""));
@@ -22,19 +26,23 @@ const Summary = () => {
     }
     setTotal(totalamount);
 
-    let list = addonsArray.map((item) => {
-      return (item?.title)
-    })
-    //console.log(list, "jajaj")
-    setaddonsList(list);
+    // let list = addonsArray.map((item) => {
+    //   return (item?.title)
+    // })
+    // setaddonsList(list);
+
+    console.log("???????????", addonsArray);
+    setaddonsList(addonsArray);
+
     if (addons.length !== 0) {
       let i = addons?.models?.findIndex(x => x?.car === summaryData);
-      //console.log(addons, "aaa")
+      console.log("1111111111111111", summaryData, addons);
       setModelDetail(addons?.models[i]);
     }
   }, [addons, summaryData, addonsArray, objectDetail])
 
-  // console.log("objectDetail", objectDetail)
+  console.log("dddddddddddddd",modelDetail);
+
   let net = 0
   const values = Object.values(objectDetail);
   if (values.length !== 0) {
@@ -44,18 +52,31 @@ const Summary = () => {
   }
 
 
+  let arrCode = [];
+  arrCode.push(modelDetail?.code, objectDetail?.exteriorcolors?.code, objectDetail?.wheel?.code, objectDetail?.interiorcolors?.code )
+  arrCode = arrCode.concat(addonsList.map((i)=>{return(i.code)}));
+  const text = arrCode.join("");
 
 
-  const arrCode = []
-  arrCode.push(modelDetail?.code, objectDetail?.exteriorcolors?.code, objectDetail?.wheel?.code, objectDetail?.interiorcolors?.code)
-  const text =arrCode.join("");
+  const plusQunatityHandle = () => {
+    setCountQuantity(countQuantity + 1)
+    let calculate = unitsPrice * (countQuantity + 1)
+    setcalculateQ(calculate)
+
+  }
+
+  const minusQuantityHandle = () => {
+    if (countQuantity > 1) {
+      setCountQuantity(countQuantity - 1)
+      setcalculateQ(calculateQ - unitsPrice)
+    }
+  }
 
   return (
     <div className="summaryContainer">
       <div className="desktop-tb summarymbl1">
         <div className="car-summary">
           <h3>SUMMARY</h3>
-         
         </div>
 
         <div className="table-responsive" style={{ overflowX: "auto" }}>
@@ -161,12 +182,46 @@ const Summary = () => {
             </thead>
             <tbody className="same-lines">
               <tr>
-                <td scope="">{addonsList.join('/')}</td>
-                <td>Z1S</td>
-                <td>
+                <td scope="">{addonsList.map((addons) => `${addons.title}/`)}</td>
+                {console.log("md", addonsList)}
 
+                {/* <td>{objectDetail?.addons?.code}</td> */}
+                {<td>{addonsList.map((addons) => `${addons.code}`)}</td>}
+                <td>
                 </td>
                 <td>INR {total.toLocaleString('en-US')}</td>
+              </tr>
+            </tbody>
+
+
+            <thead className={`${isActive ? 'unitAdd' : 'unitremove '}  same-lines`}>
+              <tr>
+                <td scope="col" className="same-head">
+                  Desc.
+                </td>
+                <td scope="col" className="same-head">
+                  No.
+                </td>
+                <td></td>
+                <td className="same-head text-right">
+                  Price
+                </td>
+              </tr>
+            </thead>
+            <tbody className={`${isActive ? 'unitAdd' : 'unitremove '}  same-lines`}>
+              <tr>
+                <td>Units</td>
+                <td><div className="counterMain">
+                  <span className="icon" onClick={() => plusQunatityHandle()}>
+                    <i className="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                  <span className="iconTxt">{countQuantity}</span>
+                  <span className="icon" onClick={() => minusQuantityHandle()}>
+                    <i className="fa fa-minus" aria-hidden="true"></i>
+                  </span>
+                </div></td>
+                <td></td>
+                <td>INR {calculateQ.toLocaleString('en-IN')}</td>
               </tr>
             </tbody>
 
@@ -180,7 +235,7 @@ const Summary = () => {
                 <td scope="col" className="same-head">
                   INR {(net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')}
                 </td>
-              </tr>
+              </tr> 
             </thead>
           </table>
         </div>

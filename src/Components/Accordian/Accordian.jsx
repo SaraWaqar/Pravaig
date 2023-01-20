@@ -1,18 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./accordian.css";
 import Accordion from "react-bootstrap/Accordion";
-import bg1 from "../../Assets/img/carb1.png";
-import bg2 from "../../Assets/img/carb2.png";
-import bg3 from "../../Assets/img/carb3.png";
-import bg4 from "../../Assets/img/carb4.png";
-import wheel1 from "../../Assets/img/wheel1.svg";
-import wheel2 from "../../Assets/img/wheel2.svg";
-import wheel3 from "../../Assets/img/wheel3.svg";
-import interior1 from "../../Assets/img/INTERIOR1.png";
-import interior2 from "../../Assets/img/INTERIOR2.png";
-import interior3 from "../../Assets/img/INTERIOR3.png";
-import interior4 from "../../Assets/img/INTERIOR4.png";
-import interior5 from "../../Assets/img/INTERIOR5.png";
 import redCar from "../../Assets/img/car-30984_960_720.png";
 import { UseSlider } from "../../Hooks/UseSlider";
 import * as Scroll from "react-scroll";
@@ -52,6 +40,8 @@ const Accordian = () => {
   const [addonItems, setAddonItems] = useState({});
   const tabs = params.get("tab");
   const [tab, setTab] = useState("0");
+
+
 
   const [wheelDetails, setwheelDetails] = useState([
     {
@@ -172,21 +162,25 @@ const Accordian = () => {
         elem.checked = true;
         arr.push(selectedAddon);
         // setAddonsArray1(arr);
+        arr = [...new Map(arr.map(v => [v._id, v])).values()]
+        console.log("addons",arr)
         setAddonsArray1([...arr])
         // colorSwitch();
         // console.log(arr)
-      } 
+      }
     });
     addons?.addons?.advance.map((elem) => {
-      elem.options.map((i,e)=>{
+      elem.options.map((i, e) => {
         if (i === selectedAddon) {
           i.checked = true;
           arr.push(selectedAddon);
           // setAddonsArray1(arr);
+          arr = [...new Map(arr.map(v => [v._id, v])).values()]
+          console.log("addons",arr)
           setAddonsArray1([...arr])
-        } 
+        }
       })
-      
+
     });
 
 
@@ -213,6 +207,7 @@ const Accordian = () => {
       if (elem === selectedAddon) {
         elem.checked = false;
         arr = arr.filter(i => i !== elem)
+        arr = [...new Map(arr.map(v => [v._id, v])).values()]
         setAddonsArray1(arr);
       }
       console.log(arr)
@@ -221,14 +216,14 @@ const Accordian = () => {
 
 
     addons?.addons?.advance.map((elem) => {
-      elem.options.map((item,e)=>{
+      elem.options.map((item, e) => {
         if (item === selectedAddon) {
           item.checked = false;
           arr = arr.filter(i => i !== item)
-        setAddonsArray1(arr);
-        } 
+          setAddonsArray1(arr);
+        }
       })
-      
+
     });
 
     setShow({ check: false, img: '' });
@@ -258,15 +253,30 @@ const Accordian = () => {
   };
   let baseUrl = `http://45.32.70.221/api/`;
   const handleSlides = (item, key, index) => {
+    console.log("handle slides",key)
+
+    if(key === 'carbonedition') {
+      // console.log(isFounded,"find");
+      let arr = addonsArray;
+      arr = arr.filter((i)=>i.type && i.type !== 'carbon')
+      arr.push(item);
+      // arr = arr.map((i)=>)
+      arr = [...new Map(arr.map(v => [v._id, v])).values()]
+      setAddonsArray1([...arr])
+    }
     colorSwitch(index, key, item)
     setExteriorColor({ name: key, color: item?.color })
     setImage(item?.mainImage);
     addCarsImgs(key, item?.mainImage)
   }
 
+  useEffect(() => {
+    addons?.models && radioHandle(addons?.models[0]);
+    let e = {target:{value:'defy'}}
+    radioHandle(e);
+  }, [])
 
-
-// console.log(addonsArray);
+  // console.log(addonsArray);
   return (
     <div className="accordion">
       <Accordion onSelect={(eventkey) => setTab(eventkey)} activeKey={tab}>
@@ -276,7 +286,7 @@ const Accordian = () => {
               setParams({ tab: "0" });
             }} >
               <h3 className="accordion__itemTitle">MODELS </h3>
-              <div className="accordion__itemIconWrap">
+              <div className="accordion__itemIconWrap"  >
                 <svg viewBox="0 0 24 24">
                   <polyline
                     fill="none"
@@ -295,7 +305,8 @@ const Accordian = () => {
                         <div className="flx-both" key={i} >
                           <span className="oulineS">
                             <input type="radio" id="html" name="fav_language" value={ele?.car}
-                              onClick={(e) => radioHandle(e)} defaultChecked />
+                              onClick={(e) => radioHandle(e)} defaultChecked={i == 0 ? true : false} /> 
+                               
                           </span>
                           <label htmlFor="html">{ele?.car}</label>
                           <br />
