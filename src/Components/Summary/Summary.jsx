@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./summary.css";
 import { UseSlider } from "../../Hooks/UseSlider";
+import copy from 'copy-to-clipboard';
 
 
 const Summary = () => {
@@ -247,7 +248,7 @@ const Summary = () => {
             Unique code:
             <span
               onClick={() => {
-                navigator.clipboard.writeText(text);
+                copy(text);
                 document.getElementById("copied").innerHTML = "  copied!"
               }}
             >
