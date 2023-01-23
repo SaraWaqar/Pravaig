@@ -25,7 +25,7 @@ import MainModal from "../modal";
 import Services from "../../Services/Services";
 
 const Accordian = () => {
-  const { colorSwitch, addons, setImage, radioHandle, addCarsImgs, objectDetail, setAddonsArray1, addonsArray } = UseSlider();
+  const { colorSwitch, addons, setImage, radioHandle, addCarsImgs, objectDetail, setAddonsArray1, addonsArray,setSelected } = UseSlider();
   const [data, setData] = useState([]);
 
   const [show, setShow] = useState(false);
@@ -125,7 +125,7 @@ const Accordian = () => {
       checked: false,
     },
     {
-      packageName: "Home Fast Ceramic",
+      packageName: "Charger Ceramic",
       price: "INR 45,000",
       checked: false,
     },
@@ -163,7 +163,7 @@ const Accordian = () => {
         arr.push(selectedAddon);
         // setAddonsArray1(arr);
         arr = [...new Map(arr.map(v => [v._id, v])).values()]
-        console.log("addons",arr)
+        // console.log("addons",arr)
         setAddonsArray1([...arr])
         // colorSwitch();
         // console.log(arr)
@@ -176,7 +176,7 @@ const Accordian = () => {
           arr.push(selectedAddon);
           // setAddonsArray1(arr);
           arr = [...new Map(arr.map(v => [v._id, v])).values()]
-          console.log("addons",arr)
+          // console.log("addons",arr)
           setAddonsArray1([...arr])
         }
       })
@@ -210,7 +210,7 @@ const Accordian = () => {
         arr = [...new Map(arr.map(v => [v._id, v])).values()]
         setAddonsArray1(arr);
       }
-      console.log(arr)
+      // console.log(arr)
       return;
     });
 
@@ -253,14 +253,23 @@ const Accordian = () => {
   };
   let baseUrl = `http://45.32.70.221/api/`;
   const handleSlides = (item, key, index) => {
-    console.log("handle slides",key)
+    // console.log("handle slides",key)
 
     if(key === 'carbonedition') {
       // console.log(isFounded,"find");
       let arr = addonsArray;
-      arr = arr.filter((i)=>i.type && i.type !== 'carbon')
+      console.log(arr,"++++++++++++");
+      arr = arr.filter((i)=>i.type !== 'carbon')
       arr.push(item);
+      console.log(arr,"___");
       // arr = arr.map((i)=>)
+      arr = [...new Map(arr.map(v => [v._id, v])).values()]
+      setAddonsArray1([...arr])
+    } else {
+      // console.log("--");
+      let arr = addonsArray;
+      console.log(arr,"++++++++++++");
+      arr = arr.filter((i)=>i.type !== 'carbon')
       arr = [...new Map(arr.map(v => [v._id, v])).values()]
       setAddonsArray1([...arr])
     }
@@ -349,6 +358,7 @@ const Accordian = () => {
                       htmlFor={item?.name}
                       className={item?.name}
                       key={i}
+                      onClick={()=>setSelected(item)}
                     >
                       <input type="radio" name="gender" id={item?.name}
                         onClick={() => handleSlides(item, 'exteriorcolors', i)} /* onClick={() =>
@@ -392,7 +402,9 @@ const Accordian = () => {
               <div className="form-group forColorcheckbox">
                 {addons?.carbonedition?.map((item, index) => {
                   return (
-                    <label key={index} htmlFor={index}>
+                    <label key={index} htmlFor={index} 
+                    onClick={()=>setSelected(item)}
+                    >
                       <input type="radio" name="gender" id={index}
                         onClick={() =>/* setImage(item?.mainImage) */ handleSlides(item, 'carbonedition', index)} />
                       <span

@@ -12,6 +12,8 @@ const SliderProvider = ({ children }) => {
   const [addonsArray, setAddonsArray1] = useState([])
   const [selectedCars, setSelectedCars] = useState([{ key: 'exteriorcolors', value: 'upload/image_1672916403764.jpg' }]);
   const [summaryData, setSummaryData] = useState('Defy')
+  const [selected,setSelected] = useState()
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -21,7 +23,7 @@ const SliderProvider = ({ children }) => {
   const fetchData = async () => {
 
     const { data } = await Services.getAll();
-    console.log(data);
+    // console.log(data);
     setAddons(data);
     setImage(data?.exteriorcolors[0]?.mainImage);
     setImagesData(data?.exteriorcolors)
@@ -79,10 +81,6 @@ const SliderProvider = ({ children }) => {
 
     }
   }
-
-
-
-
   const values = {
     setAddonsArray1,
     addonsArray,
@@ -98,7 +96,9 @@ const SliderProvider = ({ children }) => {
     addCarsImgs,
     radioHandle,
     summaryData,
-    isActive
+    isActive,
+    setSelected,
+    selected
   };
 
   return (

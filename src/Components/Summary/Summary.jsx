@@ -5,7 +5,7 @@ import copy from 'copy-to-clipboard';
 
 
 const Summary = () => {
-  const { colorSwitch, addons, setImage, radioHandle, isActive, objectDetail, addonsArray, summaryData, selectedAddon } = UseSlider();
+  const { colorSwitch, addons, setImage, radioHandle, isActive, objectDetail, addonsArray, summaryData, selectedAddon,selected } = UseSlider();
   const [modelDetail, setModelDetail] = useState(null);
   const [addonsList, setaddonsList] = useState([]);
   const [total, setTotal] = useState(0);
@@ -15,7 +15,7 @@ const Summary = () => {
   const [unitsPrice, setUnitsPrice] = useState(3950000)
   const [calculateQ, setcalculateQ] = useState(3950000)
 
-
+  // console.log(selected,"selected");
 
   useEffect(() => {
     //console.log(addonsArray, "sajid");
@@ -32,25 +32,30 @@ const Summary = () => {
     // })
     // setaddonsList(list);
 
-    console.log("???????????", addonsArray);
+    // console.log("???????????", addonsArray);
+
     setaddonsList(addonsArray);
 
     if (addons.length !== 0) {
       let i = addons?.models?.findIndex(x => x?.car === summaryData);
-      console.log("1111111111111111", summaryData, addons);
+      // console.log("1111111111111111", summaryData, addons);
       setModelDetail(addons?.models[i]);
     }
   }, [addons, summaryData, addonsArray, objectDetail])
 
-  console.log("dddddddddddddd",modelDetail);
+  // console.log("dddddddddddddd",modelDetail);
 
   let net = 0
   const values = Object.values(objectDetail);
-  if (values.length !== 0) {
-    values.forEach(item => {
+  let arr = values.filter((i)=>i.type !== 'carbon')
+  console.log(arr,"values")
+  if (arr.length !== 0) {
+    arr.forEach(item => {
       net += parseFloat(item.price?.split(",").join(""));
     });
   }
+  console.log(objectDetail,"object");
+  console.log(addonsList,"addons");
 
 
   let arrCode = [];
@@ -73,6 +78,22 @@ const Summary = () => {
     }
   }
 
+  console.log(total,"total");
+  console.log(net,"check net");
+  
+
+  // let a = modelDetail? modelDetail?.price.replace(/,/g,''):0
+  // let b =objectDetail?.exteriorcolors?.price ?  objectDetail?.exteriorcolors?.price : 0
+  // // let c = parseFloat(a?.replace(/,/g, ""));
+  // let d = parseFloat(objectDetail?.wheel?.price ? objectDetail?.wheel?.price?.replace(/,/g, ""):0)
+  // let e = objectDetail?.interiorcolors?.price? objectDetail?.interiorcolors?.price:0;
+  // console.log(eval(a,d));
+  // console.log(eval(a+b+d));
+  // function add (a,b,d) {
+  //   console.log(a+b+d);
+  // }
+  // add(a,b,d)
+console.log(addonsList,"addons");
   return (
     <div className="summaryContainer">
       <div className="desktop-tb summarymbl1">
@@ -122,8 +143,8 @@ const Summary = () => {
             </thead>
             <tbody className="same-lines">
               <tr>
-                <td scope="">{objectDetail?.exteriorcolors?.name}</td>
-                <td>{objectDetail?.exteriorcolors?.code}</td>
+                <td scope="">{selected?.type === "carbon"? "": objectDetail?.exteriorcolors?.name}</td>
+                <td>{selected?.type === "carbon"? "": objectDetail?.exteriorcolors?.code}</td>
                 <td>
                   {/* <div className="tables-icons">
                     <img
@@ -134,7 +155,7 @@ const Summary = () => {
                     <img src={require("../../Assets/img/pen.png")} alt="" />
                   </div> */}
                 </td>
-                <td>INR {objectDetail?.exteriorcolors?.price}</td>
+                <td>INR {selected?.type === "carbon"? "": objectDetail?.exteriorcolors?.price}</td>
               </tr>
             </tbody>
 
@@ -184,7 +205,7 @@ const Summary = () => {
             <tbody className="same-lines">
               <tr>
                 <td scope="">{addonsList.map((addons) => `${addons.title}/`)}</td>
-                {console.log("md", addonsList)}
+                {/* {console.log("md", addonsList)} */}
 
                 {/* <td>{objectDetail?.addons?.code}</td> */}
                 {<td>{addonsList.map((addons) => `${addons.code}`)}</td>}
@@ -234,7 +255,8 @@ const Summary = () => {
                 <td></td>
                 <td></td>
                 <td scope="col" className="same-head">
-                  INR {(net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')}
+                  
+                  INR {(net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN') }
                 </td>
               </tr> 
             </thead>
