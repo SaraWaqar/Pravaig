@@ -1,33 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./accordian.css";
 import Accordion from "react-bootstrap/Accordion";
-import redCar from "../../Assets/img/car-30984_960_720.png";
 import { UseSlider } from "../../Hooks/UseSlider";
-import * as Scroll from "react-scroll";
 import {
-  Link,
-  Button,
   Element,
-  Events,
   animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
-import { useAccordionButton } from "react-bootstrap/AccordionButton";
-import CardHeader from "react-bootstrap/esm/CardHeader";
-import { useSearchParams } from "react-router-dom";
 
-import Modal from "react-bootstrap/Modal";
-import Button2 from "react-bootstrap/Button";
+} from "react-scroll";
+import { useSearchParams } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 import MainModal from "../modal";
-import Services from "../../Services/Services";
 
 const Accordian = () => {
-  const { colorSwitch, addons, setImage, radioHandle, addCarsImgs, objectDetail, setAddonsArray1, addonsArray, setSelected } = UseSlider();
-  const [data, setData] = useState([]);
-
+  const { colorSwitch, addons, setImage, radioHandle, addCarsImgs, setAddonsArray1, addonsArray, setSelected } = UseSlider();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow({ check: false, img: '' });
   const handleShow = (index) =>
@@ -41,22 +26,7 @@ const Accordian = () => {
   const tabs = params.get("tab");
   const [tab, setTab] = useState("0");
 
-
-
-  const [wheelDetails, setwheelDetails] = useState([
-    {
-      detail: "Standard"
-    },
-    {
-      detail: "20 Inches"
-    },
-    {
-      detail: "30 Inches"
-    }
-
-  ])
   useEffect(() => {
-
     if (addons.length !== 0) {
       setSelected(addons?.exteriorcolors[0]);
       handleSlides(addons?.exteriorcolors[0], 'exteriorcolors', 0)
@@ -81,99 +51,20 @@ const Accordian = () => {
       checked: false,
     },
   ]);
-  // check after headng
-  // const [years, setYears] = useState([
-  //   {
-  //     packageName: "+ 2 Years",
-  //     price: "INR 69,000",
-  //     checked: false,
-  //   },
-  //   {
-  //     packageName: "+ 4 Years",
-  //     price: "INR 108,000",
-  //     checked: false,
-  //   },
-  // ]);
 
-  const [dummyData, setDummyData] = useState([
-    {
-      packageName: "Cocoon Package",
-      price: "INR 8,50,000",
-      checked: false,
-    },
-    {
-      packageName: "Scenting  Package",
-      price: "INR 51,000",
-      checked: false,
-    },
-    {
-      packageName: "Heating  Package",
-      price: "INR 1,50,000",
-      checked: false,
-    },
-    {
-      packageName: "Fluffy Carpets  Package",
-      price: "INR 51,000",
-      checked: false,
-    },
-    {
-      packageName: "Thick Vegan Leather",
-      price: "INR 8,000",
-      checked: false,
-    },
-    {
-      packageName: "Wheel Aero Covers",
-      price: "INR 15,000",
-      checked: false,
-    },
-    {
-      packageName: "Tyre Repair Kit",
-      price: "INR 35,000",
-      checked: false,
-    },
-    {
-      packageName: "Charger Ceramic",
-      price: "INR 45,000",
-      checked: false,
-    },
-    {
-      packageName: "PPF + Ceramic",
-      price: "INR 20,000",
-      checked: false,
-    },
-    {
-      packageName: "Soft Close Doors",
-      price: "INR 80,000",
-      checked: false,
-    },
-  ]);
-  // const colors = [
-  //   { colorCode: "#DB301F", name: "red" },
-  //   { colorCode: "#F1B640", name: "yellow" },
-  //   { colorCode: "#271257", name: "purple" },
-  //   { colorCode: "#11328F", name: "blue" },
-  //   { colorCode: "#8C918D", name: "grey" },
-  //   { colorCode: "#fff", name: "white" },
-  //   { colorCode: "#004225", name: "green" },
-  //   { colorCode: "#000", name: "black" },
-  //   { colorCode: "#E0DBD1", name: "lightgrey" },
-  // ];
+
+
 
   const [selectedAddon, setSelectedAddon] = useState({});
 
   const handleAcceptAddon = (e) => {
-    // e.preventDefault();
     let arr = addonsArray;
     addons?.addons?.basic?.map((elem) => {
       if (elem === selectedAddon) {
         elem.checked = true;
         arr.push(selectedAddon);
-        // setAddonsArray1(arr);
         arr = [...new Map(arr.map(v => [v._id, v])).values()]
-        // console.log("addons",arr)
         setAddonsArray1([...arr])
-        // colorSwitch();
-        // console.log(arr)
       }
     });
     addons?.addons?.advance.map((elem) => {
@@ -181,9 +72,7 @@ const Accordian = () => {
         if (i === selectedAddon) {
           i.checked = true;
           arr.push(selectedAddon);
-          // setAddonsArray1(arr);
           arr = [...new Map(arr.map(v => [v._id, v])).values()]
-          // console.log("addons",arr)
           setAddonsArray1([...arr])
         }
       })
@@ -191,24 +80,10 @@ const Accordian = () => {
     });
 
 
-    // addons?.item?.options?.map((elem) => {
-    //   console.log("hello",elem,selectedAddon);
-    //   if (elem === selectedAddon) {
-    //     elem.checked = true;
-    //     arr.push(selectedAddon);
-    //     // setAddonsArray1(arr);
-    //     setAddonsArray1([...arr])
-    //     // colorSwitch();
-    //     // console.log(arr)
-    //   }
-    //   return;
-    // });
-
     setShow({ check: false, img: '' });
   };
 
   const handleDeclineAddon = (e) => {
-    // e.preventDefault();
     let arr = addonsArray;
     addons?.addons?.basic?.map((elem) => {
       if (elem === selectedAddon) {
@@ -217,7 +92,6 @@ const Accordian = () => {
         arr = [...new Map(arr.map(v => [v._id, v])).values()]
         setAddonsArray1(arr);
       }
-      // console.log(arr)
       return;
     });
 
@@ -278,15 +152,11 @@ const Accordian = () => {
       setAddonsArray1([...arr])
     }
     colorSwitch(index, key, item)
-    if (key === 'exteriorcolors' || key === 'carbonedition'  ) {
+    if (key === 'exteriorcolors' || key === 'carbonedition') {
       setExteriorColor({ name: key, color: item?.color })
     }
     setImage(item?.mainImage);
     addCarsImgs(key, item?.mainImage)
-
-
-
-
   }
 
   useEffect(() => {
@@ -295,7 +165,6 @@ const Accordian = () => {
     radioHandle(e);
   }, [])
 
-  // console.log(addonsArray);
   return (
     <div className="accordion">
       <Accordion onSelect={(eventkey) => setTab(eventkey)} activeKey={tab}>
@@ -358,9 +227,7 @@ const Accordian = () => {
           </Element>
           <Accordion.Body>
             <div className="accordion__itemContent">
-              {/* <form> */}
               <div className="form-group forColorcheckbox">
-                {/* {console.log('addons?.exteriorcolors ',addons?.exteriorcolors)} */}
                 {addons?.exteriorcolors?.map((item, i) => {
 
                   return (
@@ -371,8 +238,7 @@ const Accordian = () => {
                       onClick={() => setSelected(item)}
                     >
                       <input type="radio" name="gender" id={item?.name}
-                        onClick={() => handleSlides(item, 'exteriorcolors', i)} /* onClick={() =>
-                        setExteriorColor({ name: "exteriorcolors", color: item?.color })} */  defaultChecked={i == 0 ? true : false} />
+                        onClick={() => handleSlides(item, 'exteriorcolors', i)} defaultChecked={i == 0 ? true : false} />
                       <span style={{ background: item?.color }}>
                         <div className="relative">
                           <span className="tick">
@@ -384,7 +250,6 @@ const Accordian = () => {
                   );
                 })}
               </div>
-              {/* </form> */}
             </div>
           </Accordion.Body>
         </Accordion.Item>
@@ -408,7 +273,6 @@ const Accordian = () => {
           </Element>
           <Accordion.Body>
             <div className="accordion__itemContent">
-              {/* <form> */}
               <div className="form-group forColorcheckbox">
                 {addons?.carbonedition?.map((item, index) => {
                   return (
@@ -416,7 +280,7 @@ const Accordian = () => {
                       onClick={() => setSelected(item)}
                     >
                       <input type="radio" name="gender" id={index}
-                        onClick={() =>/* setImage(item?.mainImage) */ handleSlides(item, 'carbonedition', index)} />
+                        onClick={() => handleSlides(item, 'carbonedition', index)} />
                       <span
                         style={{
                           backgroundImage: `url(${baseUrl + item?.color})`,
@@ -433,7 +297,6 @@ const Accordian = () => {
                   );
                 })}
               </div>
-              {/* </form> */}
             </div>
 
           </Accordion.Body>
@@ -468,7 +331,6 @@ const Accordian = () => {
                             onClick={() =>
                               handleImageChange(index, 'wheel', ele)
                             }
-                          // onClick={() => handleSlides(ele, 'wheel',index)}                           
                           />
                           <span
                             style={{
@@ -487,7 +349,6 @@ const Accordian = () => {
                       </div>
                     )
                   })}
-                  {/* {wheelDetails.map((item) => { return <span>{item.detail}</span> })} */}
                 </div>
               </form>
             </div>
@@ -516,12 +377,10 @@ const Accordian = () => {
               <form>
                 <div className="form-group forColorcheckbox wheel intttt">
                   {addons?.interiorcolors?.map((ele, index) => {
-                    // console.log(ele)
                     return (
                       <div key={index}>
                         <label htmlFor={`int${index}`}>
                           <input type="radio" name="gender" id={`int${index}`}
-                            //onClick={() => setImage(ele)} 
                             onClick={() => handleSlides(ele, 'interiorcolors', index)}
                           />
                           <span
@@ -570,7 +429,6 @@ const Accordian = () => {
                 {
                   addons?.addons?.basic?.map((item, index) => {
                     let des = item?.description?.split("<br>");
-                    // keys?.map((item)=>console.log(item))
                     return (
                       <div className="form-group ONscheckbox" key={index}>
                         <div className="form-divmain">
@@ -587,7 +445,7 @@ const Accordian = () => {
                               value={item?.title}
                               checked={item.checked}
                             />
-                            <label /* htmlFor={index} */>{item?.title}</label>
+                            <label >{item?.title}</label>
 
                             <img
                               onClick={() => {
@@ -661,7 +519,6 @@ const Accordian = () => {
                                 id={i}
                                 name={i?.title}
                                 onChange={() => {
-                                  //setFields({ ...fields, item: e.target.value });
                                   handleShow();
                                   handleCheckAddon(i, yearsMain, setMainYears);
                                   setSelectedAddon(i);
@@ -696,16 +553,8 @@ const Accordian = () => {
         onDeclineAddon={handleDeclineAddon}
         text={addonItems}
       />
-      {/* <MainModal       
-        show={show}
-        onHide={handleClose}
-        onAcceptAddon={handleAcceptAddon}
-        onDeclineAddon={handleDeclineAddon}
-        text={addonItems}
-      /> */}
-      <MainModal
-        //images={imagesData} 
-        show={showY} onHide={handleCloseY} text={addonItems} />
+     
+      <MainModal show={showY} onHide={handleCloseY} text={addonItems} />
     </div>
   );
 };

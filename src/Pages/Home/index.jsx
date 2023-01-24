@@ -5,9 +5,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import Topbar from '../../Components/Topbar/Topbar'
 import "./style.css"
 import "../../Assets/css/responsive.css"
-import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import ReduxData from '../../Components/ReduxData/ReduxData'
+import {  animateScroll as  scroller } from 'react-scroll'
 
 const Home = () => {
   const scrollTo =(name) =>{
@@ -22,8 +20,7 @@ const Home = () => {
   return (
     <main>
       <Topbar scrollTo={scrollTo}/>
-      <Navbar scrollTo={scrollTo}/>
-      
+      <Navbar scrollTo={scrollTo}/>    
 
       <DefySection/>
       <Footer/>

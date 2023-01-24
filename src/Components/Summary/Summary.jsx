@@ -5,7 +5,7 @@ import copy from 'copy-to-clipboard';
 
 
 const Summary = () => {
-  const { colorSwitch, addons, setImage, radioHandle, isActive, objectDetail, addonsArray, summaryData, selectedAddon, selected } = UseSlider();
+  const { addons, isActive, objectDetail, addonsArray, summaryData, selected } = UseSlider();
   const [modelDetail, setModelDetail] = useState(null);
   const [addonsList, setaddonsList] = useState([]);
   const [total, setTotal] = useState(0);
@@ -15,10 +15,7 @@ const Summary = () => {
   const [unitsPrice, setUnitsPrice] = useState(3950000)
   const [calculateQ, setcalculateQ] = useState(3950000)
 
-  // console.log(selected,"selected");
-
   useEffect(() => {
-    //console.log(addonsArray, "sajid");
     let totalamount = 0
     if (addonsArray.length !== 0) {
       addonsArray.forEach(item => {
@@ -27,23 +24,14 @@ const Summary = () => {
     }
     setTotal(totalamount);
 
-    // let list = addonsArray.map((item) => {
-    //   return (item?.title)
-    // })
-    // setaddonsList(list);
-
-    // console.log("???????????", addonsArray);
 
     setaddonsList(addonsArray);
 
     if (addons.length !== 0) {
       let i = addons?.models?.findIndex(x => x?.car === summaryData);
-      // console.log("1111111111111111", summaryData, addons);
       setModelDetail(addons?.models[i]);
     }
   }, [addons, summaryData, addonsArray, objectDetail])
-
-  // console.log("dddddddddddddd",modelDetail);
 
   let net = 0
   const values = Object.values(objectDetail);
@@ -58,7 +46,7 @@ const Summary = () => {
 
   let arrCode = [];
   let urlOfSite = 'https://configurator.pravaig.com/'
-  arrCode.push(urlOfSite, modelDetail?.code, objectDetail?.exteriorcolors?.code, objectDetail?.wheel?.code, objectDetail?.interiorcolors?.code)
+  arrCode.push(modelDetail?.code, objectDetail?.exteriorcolors?.code, objectDetail?.wheel?.code, objectDetail?.interiorcolors?.code)
   arrCode = arrCode.concat(addonsList.map((i) => { return (i.code) }));
   const text = arrCode.join("");
 
@@ -77,18 +65,6 @@ const Summary = () => {
     }
   }
 
-
-  // let a = modelDetail? modelDetail?.price.replace(/,/g,''):0
-  // let b =objectDetail?.exteriorcolors?.price ?  objectDetail?.exteriorcolors?.price : 0
-  // // let c = parseFloat(a?.replace(/,/g, ""));
-  // let d = parseFloat(objectDetail?.wheel?.price ? objectDetail?.wheel?.price?.replace(/,/g, ""):0)
-  // let e = objectDetail?.interiorcolors?.price? objectDetail?.interiorcolors?.price:0;
-  // console.log(eval(a,d));
-  // console.log(eval(a+b+d));
-  // function add (a,b,d) {
-  //   console.log(a+b+d);
-  // }
-  // add(a,b,d)
   return (
     <div className="summaryContainer">
       <div className="desktop-tb summarymbl1">
@@ -141,14 +117,7 @@ const Summary = () => {
                 <td scope="">{selected?.type === "carbon" ? "" : objectDetail?.exteriorcolors?.name}</td>
                 <td>{selected?.type === "carbon" ? "" : objectDetail?.exteriorcolors?.code}</td>
                 <td>
-                  {/* <div className="tables-icons">
-                    <img
-                      src={require("../../Assets/img/ii.png")}
-                      className="iiSum"
-                      alt=""
-                    />
-                    <img src={require("../../Assets/img/pen.png")} alt="" />
-                  </div> */}
+
                 </td>
                 <td>INR {selected?.type === "carbon" ? "" : objectDetail?.exteriorcolors?.price}</td>
               </tr>
@@ -200,8 +169,7 @@ const Summary = () => {
             <tbody className="same-lines">
               <tr>
                 <td scope="">{addonsList.map((addons) => `${addons.title}/`)}</td>
- 
-                {/* <td>{objectDetail?.addons?.code}</td> */}
+
                 {<td>{addonsList.map((addons) => `${addons.code}`)}</td>}
                 <td>
                 </td>
@@ -249,14 +217,14 @@ const Summary = () => {
                 <td></td>
                 <td></td>
                 <td scope="col" className="same-head">
-                   INR 
-                  { 
-                  summaryData == 'defy' ?  (net  + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN') 
-                  :
-                  ( 
-                   (net  + total + (calculateQ-3950000) +  parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')                  
-                  )
-                  } 
+                  INR
+                  {
+                    summaryData == 'defy' ? (net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')
+                      :
+                      (
+                        (net + total + (calculateQ - 3950000) + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')
+                      )
+                  }
                   {/* INR {(net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')} */}
                 </td>
               </tr>
@@ -271,11 +239,11 @@ const Summary = () => {
             Unique code:
             <span
               onClick={() => {
-                copy(text);
+                copy(urlOfSite + text);
                 document.getElementById("copied").innerHTML = "  copied!"
               }}
             >
-             {text}
+              {text}
               <img src={require("../../Assets/img/pdf.png")} className="w-20" />
               <span id="copied">  </span>
             </span>

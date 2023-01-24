@@ -16,22 +16,22 @@ const SliderProvider = ({ children }) => {
 
   useEffect(() => {
     fetchData();
-    let object = 
+    let object =
     {
       "exteriorcolors": {
-          "name": "Kaziranga Green",
-          "color": "#003D0E",
-          "mainImage": "upload/image_1672916403764.jpg",
-          "wheels": [
-              "upload/image_1672916617966.jpg",
-              "upload/image_1672916886898.jpg",
-              "upload/image_1672916920012.jpg"
-          ],
-          "price": "0",
-          "code": "E1",
-          "_id": "63ce6dfce6e720a9da54f78b"
+        "name": "Kaziranga Green",
+        "color": "#003D0E",
+        "mainImage": "upload/image_1672916403764.jpg",
+        "wheels": [
+          "upload/image_1672916617966.jpg",
+          "upload/image_1672916886898.jpg",
+          "upload/image_1672916920012.jpg"
+        ],
+        "price": "0",
+        "code": "E1",
+        "_id": "63ce6dfce6e720a9da54f78b"
       }
-  }
+    }
     setObjectDetail(object);
     setImage(imagesData[0]?.mainImage);
 
@@ -54,7 +54,7 @@ const SliderProvider = ({ children }) => {
       value: image,
     }
     if (key === 'carbonedition' || key === 'exteriorcolors' || key === 'wheel') {
-  
+
       if (key === 'carbonedition') {
         const newUser = selectedCars.filter((i, e) => i.key !== 'exteriorcolors' && i.key !== 'carbonedition' && i.key !== 'wheel')
         setSelectedCars([obj, ...newUser])
@@ -84,7 +84,6 @@ const SliderProvider = ({ children }) => {
 
 
   const colorSwitch = (param, key, item) => {
-    // setAddonsArray1(["abcsd"])
     let object = objectDetail;
     object[key] = item;
     setObjectDetail(object);

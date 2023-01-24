@@ -3,15 +3,10 @@ import Accordian from "../Accordian/Accordian";
 import Slider from "../Slider/Slider";
 import Summary from "../Summary/Summary";
 import "./defySection.css";
-import * as Scroll from "react-scroll";
 import {
-  Link,
-  Button,
   Element,
-  Events,
   animateScroll as scroll,
-  scrollSpy,
-  scroller,
+
 } from "react-scroll";
 
 
