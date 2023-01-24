@@ -285,7 +285,7 @@ const Accordian = () => {
     addCarsImgs(key, item?.mainImage)
 
 
-    console.log("abbbbbb");
+
 
   }
 
