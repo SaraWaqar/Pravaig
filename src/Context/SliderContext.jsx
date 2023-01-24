@@ -12,10 +12,29 @@ const SliderProvider = ({ children }) => {
   const [addonsArray, setAddonsArray1] = useState([])
   const [selectedCars, setSelectedCars] = useState([{ key: 'exteriorcolors', value: 'upload/image_1672916403764.jpg' }]);
   const [summaryData, setSummaryData] = useState('Defy')
-  const [selected,setSelected] = useState()
+  const [selected, setSelected] = useState()
 
   useEffect(() => {
     fetchData();
+    let object = 
+    {
+      "exteriorcolors": {
+          "name": "Kaziranga Green",
+          "color": "#003D0E",
+          "mainImage": "upload/image_1672916403764.jpg",
+          "wheels": [
+              "upload/image_1672916617966.jpg",
+              "upload/image_1672916886898.jpg",
+              "upload/image_1672916920012.jpg"
+          ],
+          "price": "0",
+          "code": "E1",
+          "_id": "63ce6dfce6e720a9da54f78b"
+      }
+  }
+    setObjectDetail(object);
+    setImage(imagesData[0]?.mainImage);
+
   }, []);
 
   let baseUrl = `http://45.32.70.221/api/`;
@@ -34,15 +53,20 @@ const SliderProvider = ({ children }) => {
       key: key,
       value: image,
     }
-    if (key === 'carbonedition' || key === 'exteriorcolors') {
+    if (key === 'carbonedition' || key === 'exteriorcolors' || key === 'wheel') {
+  
       if (key === 'carbonedition') {
-        const newUser = selectedCars.filter((i, e) => i.key !== 'exteriorcolors' && i.key !== 'carbonedition')
-        setSelectedCars([...newUser, obj])
-      }
+        const newUser = selectedCars.filter((i, e) => i.key !== 'exteriorcolors' && i.key !== 'carbonedition' && i.key !== 'wheel')
+        setSelectedCars([obj, ...newUser])
 
+      }
+      else if (key === 'wheel') {
+        const newUser = selectedCars.filter((i, e) => i.key !== 'exteriorcolors' && i.key !== 'carbonedition' && i.key !== 'wheel')
+        setSelectedCars([obj, ...newUser])
+      }
       else {
-        const newUser = selectedCars.filter((i, e) => i.key !== 'carbonedition' && i.key !== 'exteriorcolors')
-        setSelectedCars([...newUser, obj])
+        const newUser = selectedCars.filter((i, e) => i.key !== 'carbonedition' && i.key !== 'exteriorcolors' && i.key !== 'wheel')
+        setSelectedCars([obj, ...newUser])
       }
     }
 
@@ -50,13 +74,15 @@ const SliderProvider = ({ children }) => {
       let index = selectedCars.findIndex(item => item.key === key);
       if (index > -1) {
         const newUser = selectedCars.filter((i, e) => i.key !== key)
-        setSelectedCars([...newUser, obj])
+        setSelectedCars([obj, ...newUser])
 
       } else {
-        setSelectedCars([...selectedCars, obj])
+        setSelectedCars([obj, ...selectedCars])
       }
     }
   }
+
+
   const colorSwitch = (param, key, item) => {
     // setAddonsArray1(["abcsd"])
     let object = objectDetail;
@@ -64,6 +90,7 @@ const SliderProvider = ({ children }) => {
     setObjectDetail(object);
     setImage(imagesData[param]?.mainImage);
     addCarsImgs(key, imagesData[param]?.mainImage)
+    console.log("obj", objectDetail);
   };
 
   const handleAddonsArray = (e) => {
@@ -76,7 +103,7 @@ const SliderProvider = ({ children }) => {
     if (e.target.value === 'defy for fleet') {
       setIsActive(true)
     }
-    else{
+    else {
       setIsActive(false)
 
     }

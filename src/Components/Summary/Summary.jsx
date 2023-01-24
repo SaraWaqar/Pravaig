@@ -5,7 +5,7 @@ import copy from 'copy-to-clipboard';
 
 
 const Summary = () => {
-  const { colorSwitch, addons, setImage, radioHandle, isActive, objectDetail, addonsArray, summaryData, selectedAddon,selected } = UseSlider();
+  const { colorSwitch, addons, setImage, radioHandle, isActive, objectDetail, addonsArray, summaryData, selectedAddon, selected } = UseSlider();
   const [modelDetail, setModelDetail] = useState(null);
   const [addonsList, setaddonsList] = useState([]);
   const [total, setTotal] = useState(0);
@@ -47,20 +47,19 @@ const Summary = () => {
 
   let net = 0
   const values = Object.values(objectDetail);
-  let arr = values.filter((i)=>i.type !== 'carbon')
-  console.log(arr,"values")
+  let arr = values.filter((i) => i.type !== 'carbon')
   if (arr.length !== 0) {
     arr.forEach(item => {
       net += parseFloat(item.price?.split(",").join(""));
     });
+
   }
-  console.log(objectDetail,"object");
-  console.log(addonsList,"addons");
 
 
   let arrCode = [];
-  arrCode.push(modelDetail?.code, objectDetail?.exteriorcolors?.code, objectDetail?.wheel?.code, objectDetail?.interiorcolors?.code )
-  arrCode = arrCode.concat(addonsList.map((i)=>{return(i.code)}));
+  let urlOfSite = 'https://configurator.pravaig.com/'
+  arrCode.push(urlOfSite, modelDetail?.code, objectDetail?.exteriorcolors?.code, objectDetail?.wheel?.code, objectDetail?.interiorcolors?.code)
+  arrCode = arrCode.concat(addonsList.map((i) => { return (i.code) }));
   const text = arrCode.join("");
 
 
@@ -78,9 +77,6 @@ const Summary = () => {
     }
   }
 
-  console.log(total,"total");
-  console.log(net,"check net");
-  
 
   // let a = modelDetail? modelDetail?.price.replace(/,/g,''):0
   // let b =objectDetail?.exteriorcolors?.price ?  objectDetail?.exteriorcolors?.price : 0
@@ -93,7 +89,6 @@ const Summary = () => {
   //   console.log(a+b+d);
   // }
   // add(a,b,d)
-console.log(addonsList,"addons");
   return (
     <div className="summaryContainer">
       <div className="desktop-tb summarymbl1">
@@ -143,8 +138,8 @@ console.log(addonsList,"addons");
             </thead>
             <tbody className="same-lines">
               <tr>
-                <td scope="">{selected?.type === "carbon"? "": objectDetail?.exteriorcolors?.name}</td>
-                <td>{selected?.type === "carbon"? "": objectDetail?.exteriorcolors?.code}</td>
+                <td scope="">{selected?.type === "carbon" ? "" : objectDetail?.exteriorcolors?.name}</td>
+                <td>{selected?.type === "carbon" ? "" : objectDetail?.exteriorcolors?.code}</td>
                 <td>
                   {/* <div className="tables-icons">
                     <img
@@ -155,7 +150,7 @@ console.log(addonsList,"addons");
                     <img src={require("../../Assets/img/pen.png")} alt="" />
                   </div> */}
                 </td>
-                <td>INR {selected?.type === "carbon"? "": objectDetail?.exteriorcolors?.price}</td>
+                <td>INR {selected?.type === "carbon" ? "" : objectDetail?.exteriorcolors?.price}</td>
               </tr>
             </tbody>
 
@@ -205,8 +200,7 @@ console.log(addonsList,"addons");
             <tbody className="same-lines">
               <tr>
                 <td scope="">{addonsList.map((addons) => `${addons.title}/`)}</td>
-                {/* {console.log("md", addonsList)} */}
-
+ 
                 {/* <td>{objectDetail?.addons?.code}</td> */}
                 {<td>{addonsList.map((addons) => `${addons.code}`)}</td>}
                 <td>
@@ -255,10 +249,17 @@ console.log(addonsList,"addons");
                 <td></td>
                 <td></td>
                 <td scope="col" className="same-head">
-                  
-                  INR {(net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN') }
+                   INR 
+                  { 
+                  summaryData == 'defy' ?  (net  + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN') 
+                  :
+                  ( 
+                   (net  + total + (calculateQ-3950000) +  parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')                  
+                  )
+                  } 
+                  {/* INR {(net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')} */}
                 </td>
-              </tr> 
+              </tr>
             </thead>
           </table>
         </div>
@@ -274,7 +275,7 @@ console.log(addonsList,"addons");
                 document.getElementById("copied").innerHTML = "  copied!"
               }}
             >
-              {text}
+             {text}
               <img src={require("../../Assets/img/pdf.png")} className="w-20" />
               <span id="copied">  </span>
             </span>
