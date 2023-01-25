@@ -39,7 +39,7 @@ const DefySection = () => {
             <div className="row">
               <div className="col-lg-8 col-md-12">
                 <div className="summaryMbl">
-                  <Element name="summary1">
+                  <Element name="summary">
                     <Summary />
                   </Element>
                 </div>

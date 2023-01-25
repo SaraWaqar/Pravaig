@@ -65,7 +65,7 @@ const Summary = () => {
   }
   let defyTotal = (net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN');
   let defyFleetTotal = (net + total + (calculateQ - 3950000) + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')
-
+  // console.log("KKKKKKKKKKKKKKKKKKKKKK", addonsList);
   return (
     <div className="summaryContainer">
       <h2 className="main-text"> {summaryData == 'defy' ? "DEFY" : "DEFY FOR FLEET"}</h2>
@@ -137,7 +137,7 @@ const Summary = () => {
                 <td>{objectDetail?.wheel?.code}</td>
                 <td>
                 </td>
-                <td>INR {objectDetail?.wheel?.price}</td>
+                <td>INR {objectDetail?.wheel?.price || 0}</td>
               </tr>
             </tbody>
 
@@ -154,7 +154,7 @@ const Summary = () => {
                 <td>{objectDetail?.interiorcolors?.code}</td>
                 <td>
                 </td>
-                <td>INR {objectDetail?.interiorcolors?.price}</td>
+                <td>INR {objectDetail?.interiorcolors?.price || 0}</td>
               </tr>
             </tbody>
 
@@ -166,13 +166,43 @@ const Summary = () => {
               </tr>
             </thead>
             <tbody className="same-lines">
-              <tr>
-                <td scope="">{addonsList.map((addons) => `${addons.title} `)}</td>
-                {<td>{addonsList.map((addons) => `${addons.code}`)}</td>}
-                <td>
-                </td>
+              {/* {addonsList.map((addons) => <><td scope="">{addons.title} </td> <br/> </>)}
+                {<td>{addonsList.map((addons) => `${addons.code}`)}</td>} */}
+              {/* <tr>
+                <td>K</td>
+                <td>H</td>
                 <td>INR {total.toLocaleString('en-IN')}</td>
-              </tr>
+              </tr> */}
+              {
+                addonsList.map((addons) => (
+                  <tr>
+                    <td>
+                      {addons.code == "05" || addons.code == "06" ? "Maintenance Package " : null}
+                      {addons.code == "03" || addons.code == "04" ? "Connectivity Package " : null}
+                      {addons.title}
+                    </td>
+                    <td>{addons.code}</td>
+                    <td> </td>
+                    <td>INR {addons.price.toLocaleString('en-IN')}</td>
+                  </tr>
+                ))
+              }
+              {/* <td>INR {total.toLocaleString('en-IN')}</td> */}
+              {/* <div>
+                {
+                  addonsList.map((addons) => (
+                    <td scope="">{addons.title} </td>
+                  ))
+                }
+              </div>
+
+              <div>
+                {
+                  addonsList.map((addons) => (
+                    <td scope="">{addons.title} </td>
+                  ))
+                }
+              </div> */}
             </tbody>
 
             <thead className={`${isActive ? 'unitAdd' : 'unitremove '}  same-lines`}>

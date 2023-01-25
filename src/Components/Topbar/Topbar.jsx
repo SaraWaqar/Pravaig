@@ -179,7 +179,7 @@ const Topbar = ({ scrollTo }) => {
                         role="presentation"
                         onClick={() => {
                           setParams({ tab: "6" });
-                          scrollTo("incolor");
+                          scrollTo("car-summary");
                           iconBar();
                         }}
                       >

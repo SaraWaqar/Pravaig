@@ -420,7 +420,11 @@ div .modal-content {
 
 input#\31 0 ~ img {
     display: none;
-}   
+}  
+
+input#\38 ~ img {
+    display: none;
+} 
 .modalCustom p {
     font-size: 14px;
 

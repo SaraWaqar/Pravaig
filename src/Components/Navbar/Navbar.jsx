@@ -138,7 +138,9 @@ const Navbar = ({ scrollTo }) => {
               role="presentation"
               onClick={() => {
                 setParams({ tab: "6" });
-                scrollTo("summary");
+                // scrollTo("summary");
+                const jjj = document.querySelector(".summaryContainer").offsetHeight - 20
+                window.scroll(1,jjj);
               }}
             >
               <Link
@@ -147,7 +149,7 @@ const Navbar = ({ scrollTo }) => {
                 role="tab"
                 aria-controls="Summary"
                 aria-selected="false"
-                onClick={() => scrollTo("summary")}
+                // onClick={() => /* scrollTo("summary") */window.scroll(1,1000)}
               >
                 Summary
               </Link>

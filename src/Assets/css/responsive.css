@@ -1,5 +1,3 @@
-
-
 @media (min-width:1401px) and (max-width:1600px) {
     .center-logo img {
         max-width: 200px;
@@ -216,6 +214,10 @@
         width: 90%;
     }
 
+    .pdfSection {
+        max-width: 90%;
+    }
+
     footer.footer {
         padding-top: 90px;
         padding-bottom: 90px;
@@ -238,14 +240,17 @@
         flex: 0 0 20%;
 
     }
-    .wheelName{
+
+    .wheelName {
         font-size: 11px;
     }
+
     .modal-dialog .car-descript h2 {
         margin: 15px 0;
         font-size: 20px;
     }
-    .modal-dialog p{
+
+    .modal-dialog p {
         font-size: 14px;
         padding-right: 0;
     }
@@ -858,14 +863,16 @@
     .pdfSection h3 {
         font-size: 16px;
     }
-    .modalCustom p{
+
+    .modalCustom p {
         padding-right: 0;
     }
-  
-    
-    .modal-body  .row.first-row.sec-row .col.lg-6.m-auto {
+
+
+    .modal-body .row.first-row.sec-row .col.lg-6.m-auto {
         padding-left: 0;
     }
+
     ul#myTab li.slide>.nav-item a::before {
         content: '';
         width: 2px;
@@ -1228,10 +1235,12 @@
         color: hsl(11deg 100% 62%);
         font-weight: 100;
     }
+
     div .modal-dialog.edit-mode .modal-header button span {
         color: #ff7d00;
         font-weight: 300;
     }
+
     .modal-dialog.edit-mode .modal-header button span {
         color: #fff;
     }
@@ -1292,11 +1301,12 @@
     .accordion img {
         width: 20px !important;
     }
+
     div div .modal-dialog {
         min-width: 100%;
         max-width: 100%;
     }
-   
+
 
 }
 
@@ -1306,14 +1316,15 @@
         margin: 15px 0;
         font-size: 18px;
     }
- 
-    .wheel label ~ span {
+
+    .wheel label~span {
         text-transform: uppercase;
         font-size: 12px;
         font-weight: 500;
         flex: 0 0 120px;
         text-align: left;
     }
+
     /* .mblNavBar.main-tabs li.nav-item:last-child .nav-link {
         border-right: 1px solid #c4c4c4;
          
@@ -1322,6 +1333,7 @@
         padding-left: 0;
         padding-right: 0;
     }
+
     .accordion img {
         width: 15px !important;
     }
@@ -1688,13 +1700,13 @@
 
 }
 
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
     .forColorcheckbox input[type="radio"]+span {
-          height: 70px;
-          width: 70px;
-      }
-  
-  }
+        height: 70px;
+        width: 70px;
+    }
+
+}
 
 
 @media (max-width: 425px) {
@@ -1765,6 +1777,7 @@
     .form-group.ADDONcheckbox .checkbox-text label {
         font-size: 14px;
     }
+
     .forColorcheckbox input[type="radio"]+span {
 
         height: 85px;

@@ -411,6 +411,7 @@ const Accordian = () => {
                               name={item?.title}
                               onClick={(e) => {
                                 // console.log(e.target.checked)
+                                
                                 setSelectedAddon(item);
                                 setAddonItems({ ...item, des })
                                {e.target.checked ? handleAcceptAddon(e,item): handleDeclineAddon(e,item)}
@@ -494,12 +495,8 @@ const Accordian = () => {
                                 id={i}
                                 name={i?.title}
                                 onClick={(e) => {
-                                  // console.log(e.target.checked )
+                                  
                                   handleShow();
-                                  // //handleCheckAddon(i, yearsMain, setMainYears);
-                                  // setSelectedAddon(i);
-                                  // setAddonItems({ ...i, des })
-                                  // console.log(e.target.checked)
                                   setSelectedAddon(i);
                                   setAddonItems({ ...i, des })
                                  {e.target.checked ? handleAcceptAddon(e,i): handleDeclineAddon(e,i)}
