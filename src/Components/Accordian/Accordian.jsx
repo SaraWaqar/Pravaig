@@ -39,54 +39,36 @@ const Accordian = () => {
     }
   }, [tabs]);
 
-  const [yearsMain, setMainYears] = useState([
-    {
-      packageName: "+ 2 Years",
-      price: "INR 360,000",
-      checked: false,
-    },
-    {
-      packageName: "+ 4 Years",
-      price: "INR 630,000",
-      checked: false,
-    },
-  ]);
-
-
-
 
   const [selectedAddon, setSelectedAddon] = useState({});
 
-  const handleAcceptAddon = (e) => {
+  const handleAcceptAddon = (e,param) => {
     let arr = addonsArray;
     addons?.addons?.basic?.map((elem) => {
-      if (elem === selectedAddon) {
+      if (elem === param) {
         elem.checked = true;
-        arr.push(selectedAddon);
+        arr.push(param);
         arr = [...new Map(arr.map(v => [v._id, v])).values()]
         setAddonsArray1([...arr])
       }
     });
     addons?.addons?.advance.map((elem) => {
       elem.options.map((i, e) => {
-        if (i === selectedAddon) {
+        if (i === param) {
           i.checked = true;
-          arr.push(selectedAddon);
+          arr.push(param);
           arr = [...new Map(arr.map(v => [v._id, v])).values()]
           setAddonsArray1([...arr])
         }
       })
-
     });
-
-
     setShow({ check: false, img: '' });
   };
 
-  const handleDeclineAddon = (e) => {
+  const handleDeclineAddon = (e,param) => {
     let arr = addonsArray;
     addons?.addons?.basic?.map((elem) => {
-      if (elem === selectedAddon) {
+      if (elem === param) {
         elem.checked = false;
         arr = arr.filter(i => i !== elem)
         arr = [...new Map(arr.map(v => [v._id, v])).values()]
@@ -94,11 +76,9 @@ const Accordian = () => {
       }
       return;
     });
-
-
     addons?.addons?.advance.map((elem) => {
       elem.options.map((item, e) => {
-        if (item === selectedAddon) {
+        if (item === param) {
           item.checked = false;
           arr = arr.filter(i => i !== item)
           setAddonsArray1(arr);
@@ -106,7 +86,6 @@ const Accordian = () => {
       })
 
     });
-
     setShow({ check: false, img: '' });
   };
   const handleImageChange = (index, key, item) => {
@@ -115,8 +94,6 @@ const Accordian = () => {
     let i = addons[param].findIndex(x => x.color === ExteriorColor?.color);
     setImage(addons[param][i]?.wheels[index])
     addCarsImgs(key, addons[param][i]?.wheels[index])
-
-
   }
 
   const handleCheckAddon = (selectedItem, data, setdata) => {
@@ -298,10 +275,8 @@ const Accordian = () => {
                 })}
               </div>
             </div>
-
           </Accordion.Body>
         </Accordion.Item>
-
         <Accordion.Item eventKey="3">
           <Element name="wheels">
             <Accordion.Header onClick={() => {
@@ -343,7 +318,6 @@ const Accordian = () => {
                               <i className="fa fa-check" aria-hidden="true"></i>
                             </span>
                           </span>
-
                           <span className="wheelName">{ele.name}</span>
                         </label>
                       </div>
@@ -354,7 +328,6 @@ const Accordian = () => {
             </div>
           </Accordion.Body>
         </Accordion.Item>
-
         <Accordion.Item eventKey="4">
           <Element name="incolor">
             <Accordion.Header onClick={() => {
@@ -404,7 +377,6 @@ const Accordian = () => {
 
           </Accordion.Body>
         </Accordion.Item>
-
         <Accordion.Item eventKey="5">
           <Element name="adson">
             <Accordion.Header onClick={() => {
@@ -425,7 +397,6 @@ const Accordian = () => {
           <Accordion.Body>
             <div className="accordion__itemContent">
               <form className="ADD-ONS">
-
                 {
                   addons?.addons?.basic?.map((item, index) => {
                     let des = item?.description?.split("<br>");
@@ -438,9 +409,12 @@ const Accordian = () => {
                               className="inp11"
                               id={index}
                               name={item?.title}
-                              onChange={() => {
+                              onClick={(e) => {
+                                console.log(e.target.checked)
                                 setSelectedAddon(item);
                                 setAddonItems({ ...item, des })
+                               {e.target.checked ? handleAcceptAddon(e,item): handleDeclineAddon(e,item)}
+                                // {item.checked ? handleDeclineAddon(e) : ''}
                               }}
                               value={item?.title}
                               checked={item.checked}
@@ -484,6 +458,7 @@ const Accordian = () => {
                                   <a onClick={() => {
                                     handleShowY();
                                     setAddonItems({ ...item, des })
+                                    
                                   }}>
                                     <img
                                       src={require("../../Assets/img/ii.png")}
@@ -518,11 +493,16 @@ const Accordian = () => {
                                 className="inp11"
                                 id={i}
                                 name={i?.title}
-                                onChange={() => {
+                                onClick={(e) => {
+                                  // console.log(e.target.checked )
                                   handleShow();
-                                  handleCheckAddon(i, yearsMain, setMainYears);
+                                  // //handleCheckAddon(i, yearsMain, setMainYears);
+                                  // setSelectedAddon(i);
+                                  // setAddonItems({ ...i, des })
+                                  console.log(e.target.checked)
                                   setSelectedAddon(i);
                                   setAddonItems({ ...i, des })
+                                 {e.target.checked ? handleAcceptAddon(e,i): handleDeclineAddon(e,i)}
                                 }}
                                 value={i?.title}
                                 checked={i.checked}
@@ -553,7 +533,7 @@ const Accordian = () => {
         onDeclineAddon={handleDeclineAddon}
         text={addonItems}
       />
-     
+
       <MainModal show={showY} onHide={handleCloseY} text={addonItems} />
     </div>
   );
