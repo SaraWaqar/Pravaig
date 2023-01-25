@@ -24,10 +24,7 @@ const DefySection = () => {
             <div className="row first-row">
               <div className="col-lg-8 col-md-12">
                 <Slider />
-                <h2 className="main-text">DEFY</h2>
-                <div className="car-content">
-                  <h3>39,50,000 INR</h3>
-                </div>
+              
                 <div className="summaryDesk">
                   <Element name="summary">
                     <Summary />

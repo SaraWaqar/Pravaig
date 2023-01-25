@@ -63,9 +63,15 @@ const Summary = () => {
       setcalculateQ(calculateQ - unitsPrice)
     }
   }
+  let defyTotal = (net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN');
+  let defyFleetTotal = (net + total + (calculateQ - 3950000) + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')
 
   return (
     <div className="summaryContainer">
+      <h2 className="main-text"> {summaryData == 'defy' ? "DEFY" : "DEFY FOR FLEET"}</h2>
+      <div className="car-content">
+        <h3> INR {summaryData == 'defy' ? defyTotal : defyFleetTotal} </h3>
+      </div>
       <div className="desktop-tb summarymbl1">
         <div className="car-summary">
           <h3>SUMMARY</h3>
@@ -169,8 +175,6 @@ const Summary = () => {
               </tr>
             </tbody>
 
-
-
             <thead className={`${isActive ? 'unitAdd' : 'unitremove '}  same-lines`}>
               <tr>
                 <td scope="col" className="same-head pt-3 pb-3" >Units</td>
@@ -198,13 +202,7 @@ const Summary = () => {
                 <td></td>
                 <td scope="col" className="same-head">
                   INR <span style={{ marginLeft: 2 }}></span>
-                  {
-                    summaryData == 'defy' ? (net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')
-                      :
-                      (
-                        (net + total + (calculateQ - 3950000) + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')
-                      )
-                  }
+                  {summaryData == 'defy' ? defyTotal : defyFleetTotal}
                   {/* INR {(net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')} */}
                 </td>
               </tr>
