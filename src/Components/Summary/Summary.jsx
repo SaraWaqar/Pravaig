@@ -5,7 +5,8 @@ import copy from 'copy-to-clipboard';
 
 
 const Summary = () => {
-  const { addons, isActive, objectDetail, addonsArray, summaryData, selected } = UseSlider();
+
+  const { addons, isActive, objectDetail, addonsArray, summaryData, selected, setIsActive } = UseSlider();
   const [modelDetail, setModelDetail] = useState(null);
   const [addonsList, setaddonsList] = useState([]);
   const [total, setTotal] = useState(0);
@@ -14,6 +15,9 @@ const Summary = () => {
   const [countQuantity, setCountQuantity] = useState(1);
   const [unitsPrice, setUnitsPrice] = useState(3950000)
   const [calculateQ, setcalculateQ] = useState(3950000)
+  const [isActiveSumm, setIsActiveSumm] = useState(false);
+
+  setTimeout(() => setIsActiveSumm(false), 20000)
 
   useEffect(() => {
     let totalamount = 0
@@ -23,10 +27,7 @@ const Summary = () => {
       });
     }
     setTotal(totalamount);
-
-
     setaddonsList(addonsArray);
-
     if (addons.length !== 0) {
       let i = addons?.models?.findIndex(x => x?.car === summaryData);
       setModelDetail(addons?.models[i]);
@@ -40,7 +41,6 @@ const Summary = () => {
     arr.forEach(item => {
       net += parseFloat(item.price?.split(",").join(""));
     });
-
   }
 
 
@@ -55,7 +55,6 @@ const Summary = () => {
     setCountQuantity(countQuantity + 1)
     let calculate = unitsPrice * (countQuantity + 1)
     setcalculateQ(calculate)
-
   }
 
   const minusQuantityHandle = () => {
@@ -71,7 +70,6 @@ const Summary = () => {
         <div className="car-summary">
           <h3>SUMMARY</h3>
         </div>
-
         <div className="table-responsive" style={{ overflowX: "auto" }}>
           <table className="table summarytable">
             <thead className="main-heading">
@@ -88,7 +86,6 @@ const Summary = () => {
                 </td>
               </tr>
             </thead>
-
             <thead>
               <tr>
                 <td scope="col" className="same-head">
@@ -104,7 +101,6 @@ const Summary = () => {
                 <td>INR {modelDetail?.price}</td>
               </tr>
             </tbody>
-
             <thead>
               <tr>
                 <td scope="col" className="same-head">
@@ -122,7 +118,6 @@ const Summary = () => {
                 <td>INR {selected?.type === "carbon" ? "" : objectDetail?.exteriorcolors?.price}</td>
               </tr>
             </tbody>
-
             <thead>
               <tr>
                 <td scope="col" className="same-head">
@@ -135,7 +130,6 @@ const Summary = () => {
                 <td scope="">{objectDetail?.wheel?.name}</td>
                 <td>{objectDetail?.wheel?.code}</td>
                 <td>
-
                 </td>
                 <td>INR {objectDetail?.wheel?.price}</td>
               </tr>
@@ -153,7 +147,6 @@ const Summary = () => {
                 <td scope="">{objectDetail?.interiorcolors?.color}</td>
                 <td>{objectDetail?.interiorcolors?.code}</td>
                 <td>
-
                 </td>
                 <td>INR {objectDetail?.interiorcolors?.price}</td>
               </tr>
@@ -168,8 +161,7 @@ const Summary = () => {
             </thead>
             <tbody className="same-lines">
               <tr>
-                <td scope="">{addonsList.map((addons) => `${addons.title}/`)}</td>
-
+                <td scope="">{addonsList.map((addons) => `${addons.title} `)}</td>
                 {<td>{addonsList.map((addons) => `${addons.code}`)}</td>}
                 <td>
                 </td>
@@ -178,24 +170,11 @@ const Summary = () => {
             </tbody>
 
 
+
             <thead className={`${isActive ? 'unitAdd' : 'unitremove '}  same-lines`}>
               <tr>
-                <td scope="col" className="same-head">
-                  Desc.
-                </td>
-                <td scope="col" className="same-head">
-                  No.
-                </td>
-                <td></td>
-                <td className="same-head text-right">
-                  Price
-                </td>
-              </tr>
-            </thead>
-            <tbody className={`${isActive ? 'unitAdd' : 'unitremove '}  same-lines`}>
-              <tr>
-                <td>Units</td>
-                <td><div className="counterMain">
+                <td scope="col" className="same-head pt-3 pb-3" >Units</td>
+                <td scope="col"><div className="counterMain">
                   <span className="icon" onClick={() => plusQunatityHandle()}>
                     <i className="fa fa-plus" aria-hidden="true"></i>
                   </span>
@@ -205,19 +184,20 @@ const Summary = () => {
                   </span>
                 </div></td>
                 <td></td>
-                <td>INR {calculateQ.toLocaleString('en-IN')}</td>
+                <td scope="col" className="text-right" style={{ minWidth: 200 }}>INR {calculateQ.toLocaleString('en-IN')}</td>
               </tr>
-            </tbody>
+            </thead>
+
 
             <thead className="last-head">
               <tr>
                 <td scope="col" className="same-head">
-                  Total Price*
+                  Total Price
                 </td>
                 <td></td>
                 <td></td>
                 <td scope="col" className="same-head">
-                  INR
+                  INR <span style={{ marginLeft: 2 }}></span>
                   {
                     summaryData == 'defy' ? (net + total + parseFloat(modelDetail?.price.split(",").join(""))).toLocaleString('en-IN')
                       :
@@ -240,12 +220,13 @@ const Summary = () => {
             <span
               onClick={() => {
                 copy(urlOfSite + text);
-                document.getElementById("copied").innerHTML = "  copied!"
+                setIsActiveSumm(true)
+                //document.getElementById("copied").innerHTML = "  Copied!"
               }}
             >
               {text}
               <img src={require("../../Assets/img/pdf.png")} className="w-20" />
-              <span id="copied">  </span>
+              <span id="copied" className={`${isActiveSumm ? 'blockNone' : ''} `}> Copied!  </span>
             </span>
           </h3>
           <a className="stdBtn">Download PDF</a>

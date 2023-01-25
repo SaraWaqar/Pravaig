@@ -239,7 +239,7 @@
 
     }
     .wheelName{
-        font-size: 14px;
+        font-size: 11px;
     }
     .modal-dialog .car-descript h2 {
         margin: 15px 0;
@@ -1626,8 +1626,8 @@
 
     .forColorcheckbox input[type="radio"]+span {
 
-        height: 80px;
-        width: 80px;
+        height: 130px;
+        width: 130px;
     }
 
     form.models-radio .form-group.forColorRadio {
@@ -1700,8 +1700,8 @@
 @media (max-width: 425px) {
     .forColorcheckbox input[type="radio"]+span {
 
-        height: 60px;
-        width: 60px;
+        height: 100px;
+        width: 100px;
     }
 
     ul#myTab .carousel.carousel-slider .control-arrow,
@@ -1765,5 +1765,11 @@
     .form-group.ADDONcheckbox .checkbox-text label {
         font-size: 14px;
     }
+    .forColorcheckbox input[type="radio"]+span {
+
+        height: 80px;
+        width: 80px;
+    }
+
 
 }

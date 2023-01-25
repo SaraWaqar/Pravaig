@@ -92,9 +92,9 @@ const SliderProvider = ({ children }) => {
     console.log("obj", objectDetail);
   };
 
-  const handleAddonsArray = (e) => {
-    setAddonsArray1([...e])
-  }
+  // const handleAddonsArray = (e) => {
+  //   setAddonsArray1([...e])
+  // }
 
   //summary defy selection
   const radioHandle = (e) => {
@@ -124,6 +124,7 @@ const SliderProvider = ({ children }) => {
     summaryData,
     isActive,
     setSelected,
+    setIsActive,
     selected
   };
 
