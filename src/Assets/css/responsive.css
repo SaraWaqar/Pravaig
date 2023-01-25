@@ -1117,8 +1117,8 @@
     }
 
     .forColorcheckbox input[type="radio"]+span {
-        width: 150px;
-        height: 150px;
+        width: 95px;
+        height: 95px;
     }
 
     h3.accordion__itemTitle {
@@ -1286,7 +1286,7 @@
     }
 
     .forColorcheckbox label {
-        flex: 0 0 17%;
+        flex: 0 0 13%;
     }
 
     .accordion img {
@@ -1640,7 +1640,7 @@
     }
 
     .forColorcheckbox label {
-        flex: 0 0 30%;
+        flex: 0 0 22%;
     }
 
     .carousel.carousel-slider .slide img {
@@ -1700,8 +1700,8 @@
 @media (max-width: 425px) {
     .forColorcheckbox input[type="radio"]+span {
 
-        height: 100px;
-        width: 100px;
+        height: 85px;
+        width: 85px;
     }
 
     ul#myTab .carousel.carousel-slider .control-arrow,
@@ -1767,8 +1767,8 @@
     }
     .forColorcheckbox input[type="radio"]+span {
 
-        height: 80px;
-        width: 80px;
+        height: 85px;
+        width: 85px;
     }
 
 
