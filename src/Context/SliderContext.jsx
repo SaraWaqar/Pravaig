@@ -42,7 +42,7 @@ const SliderProvider = ({ children }) => {
   const fetchData = async () => {
 
     const { data } = await Services.getAll();
-    // console.log(data);
+     console.log(data);
     setAddons(data);
     setImage(data?.exteriorcolors[0]?.mainImage);
     setImagesData(data?.exteriorcolors)

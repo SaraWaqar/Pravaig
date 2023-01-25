@@ -165,7 +165,7 @@ const Summary = () => {
                 {<td>{addonsList.map((addons) => `${addons.code}`)}</td>}
                 <td>
                 </td>
-                <td>INR {total.toLocaleString('en-US')}</td>
+                <td>INR {total.toLocaleString('en-IN')}</td>
               </tr>
             </tbody>
 
