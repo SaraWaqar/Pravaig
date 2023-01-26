@@ -214,7 +214,10 @@ span.blockNone {
     margin-left: 6px;
     margin-top: -3px;
 }
-
+.fleet{
+    min-width: 200px;
+    font-size: 15px
+                   }
 .counterMain {
     display: flex;
     align-items: center;
@@ -250,7 +253,13 @@ img.w-20 {
     display: none;
 }
 
+@media (min-width: 992px) and (max-width: 1200px) {
 
+.fleet{
+    min-width: 200px;
+    font-size: 10px
+}
+                   }
 @media(max-width: 991px) {
     .pdfSection {
         margin-top: 0;
