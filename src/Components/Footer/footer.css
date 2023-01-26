@@ -81,13 +81,12 @@ div div input.inp11::before {
     font-family: 'FontAwesome';
     font-weight: 900;
     display: none;
-    top: 45%;
+    top: 50%;
     font-size: 11px;
-    left: 47%;
+    left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 11px;
-    height: 16px;
+
     border: 1px solid transparent;
     
 }
