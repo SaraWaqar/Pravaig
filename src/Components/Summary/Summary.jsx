@@ -166,14 +166,15 @@ const Summary = () => {
               </tr>
             </thead>
             <tbody className="same-lines">
-              {/* {addonsList.map((addons) => <><td scope="">{addons.title} </td> <br/> </>)}
-                {<td>{addonsList.map((addons) => `${addons.code}`)}</td>} */}
-              {/* <tr>
-                <td>K</td>
-                <td>H</td>
-                <td>INR {total.toLocaleString('en-IN')}</td>
-              </tr> */}
-              {
+              { addonsList.length === 0 ?
+                <tr>
+                <td>
+                 
+                </td>
+                <td></td>
+                <td> </td>
+                <td>INR 0</td>
+              </tr> :
                 addonsList.map((addons) => (
                   <tr>
                     <td>
