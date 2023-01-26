@@ -1,6 +1,7 @@
-.foot-2.mobile{
+.foot-2.mobile {
     display: none;
 }
+
 .social ul li {
     cursor: pointer;
 }
@@ -11,6 +12,7 @@ footer.footer {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .footer-links ul.footer-nav li a {
     color: #ffff;
     font-family: 'Poppins';
@@ -18,6 +20,7 @@ footer.footer {
     font-weight: 400;
     line-height: 3em;
 }
+
 .footer-links h4 {
     font-size: 18px;
     color: #fff;
@@ -25,6 +28,7 @@ footer.footer {
     font-family: 'Poppins';
     padding-bottom: 15px;
 }
+
 footer.foot-2 .row .col-6:last-child {
     text-align: right;
 }
@@ -37,6 +41,7 @@ footer.foot-2.desktop .row .col-lg-6 p {
     font-size: 16px;
     font-weight: 400;
 }
+
 .footer .social ul {
     display: flex;
     gap: 20px;
@@ -50,6 +55,7 @@ footer.foot-2.desktop .row .col-lg-6 p {
 .footer-sm-log {
     padding-bottom: 50px;
 }
+
 .cocoon {
     appearance: none;
     width: 20px;
@@ -67,24 +73,34 @@ input.inp11 {
     border: 1px solid #FF7D00;
     position: relative;
     border-radius: 0;
+    overflow: hidden;
 }
-input.inp11::before{
+
+div div input.inp11::before {
     content: '\f00c';
     font-family: 'FontAwesome';
     font-weight: 900;
     display: none;
-    top: -2px;
+    top: 45% ;
     font-size: 12px;
-    left: 2px;
+    left: 47%;
     position: absolute;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 18px;
+    border: 1px solid transparent;
+    
 }
-input.inp11:checked::before{
+
+input.inp11:checked::before {
     display: block;
     color: #fff;
 }
+
 input.inp11:checked {
     background: #ff7d00;
 }
+
 .social ul li {
     background: transparent;
     border-radius: 30px;
@@ -111,9 +127,11 @@ input.inp11:checked {
 .footer-links ul.footer-nav li a {
     transition: all ease 0.5s;
 }
+
 .form-divmain .checkbox-texts {
     align-items: center;
 }
+
 header ul.main-menu li a:hover {
     text-decoration: none;
 }
@@ -122,16 +140,20 @@ header ul.main-menu li a:hover {
     max-width: 80%;
     margin: 1.75rem auto;
 }
+
 .modal-slider img {
     height: 700px;
 }
+
 .row.first-row.sec-row {
     width: 95%;
     margin: 0 auto;
 }
+
 .row.first-row.sec-row .col.lg-6.m-auto {
     padding-left: 60px;
 }
+
 .modal-dialog.edit-mode .modal-header {
     border: none;
     padding: 0 16px;
@@ -148,6 +170,7 @@ header ul.main-menu li a:hover {
     text-shadow: none;
     font-weight: 800;
 }
+
 .modal-dialog button.close {
     opacity: 1;
     text-shadow: none;
@@ -161,6 +184,7 @@ header ul.main-menu li a:hover {
 .row.first-row.sec-row {
     padding-bottom: 0;
 }
+
 .mobileFooter {
     display: none;
 }
@@ -194,19 +218,10 @@ footer.foot-2.desktop .social-icons li a i {
 footer.foot-2.desktop .social-icons li a i:hover {
     color: #FF7D00;
 }
+
 footer.foot-2.desktop {
     padding: 15px 0;
 }
-/* hamza css  */
-
-
-
-
-
-
-
-
-
 
 
 
@@ -219,10 +234,12 @@ footer.foot-2.desktop {
 .modal-body.inr-popup {
     text-align: center;
 }
+
 div div .modal-dialog {
     min-width: 500px;
     max-width: 500px;
 }
+
 .fade.modalWithImg.modal .col {
     text-align: left;
-} 
+}
