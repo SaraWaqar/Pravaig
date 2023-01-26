@@ -39,10 +39,9 @@ const Accordian = () => {
     }
   }, [tabs]);
 
-
   const [selectedAddon, setSelectedAddon] = useState({});
-
-  const handleAcceptAddon = (e,param) => {
+  const handleAcceptAddon = (e, param) => {
+    console.log("param", param);
     let arr = addonsArray;
     addons?.addons?.basic?.map((elem) => {
       if (elem === param) {
@@ -65,7 +64,7 @@ const Accordian = () => {
     setShow({ check: false, img: '' });
   };
 
-  const handleDeclineAddon = (e,param) => {
+  const handleDeclineAddon = (e, param) => {
     let arr = addonsArray;
     addons?.addons?.basic?.map((elem) => {
       if (elem === param) {
@@ -95,9 +94,7 @@ const Accordian = () => {
     setImage(addons[param][i]?.wheels[index])
     addCarsImgs(key, addons[param][i]?.wheels[index])
   }
-
   const handleCheckAddon = (selectedItem, data, setdata) => {
-
     const dataModify = data.map((elem) => {
       if (elem === selectedItem) {
         if (elem.checked === true) {
@@ -141,9 +138,10 @@ const Accordian = () => {
     let e = { target: { value: 'defy' } }
     radioHandle(e);
   }, [])
-
   return (
     <div className="accordion">
+      
+
       <Accordion onSelect={(eventkey) => setTab(eventkey)} activeKey={tab}>
         <Element name="model">
           <Accordion.Item eventKey="0">
@@ -168,10 +166,9 @@ const Accordian = () => {
                     {addons?.models?.map((ele, i) => {
                       return (
                         <div className="flx-both" key={i} >
-                          <span className="oulineS">
+                          <span className="oulineS ">
                             <input type="radio" id="html" name="fav_language" value={ele?.car}
                               onClick={(e) => radioHandle(e)} defaultChecked={i == 0 ? true : false} />
-
                           </span>
                           <label htmlFor="html">{ele?.car}</label>
                           <br />
@@ -184,7 +181,6 @@ const Accordian = () => {
             </Accordion.Body>
           </Accordion.Item>
         </Element>
-
         <Accordion.Item eventKey="1">
           <Element name="excolor">
             <Accordion.Header onClick={() => {
@@ -206,7 +202,6 @@ const Accordian = () => {
             <div className="accordion__itemContent">
               <div className="form-group forColorcheckbox">
                 {addons?.exteriorcolors?.map((item, i) => {
-
                   return (
                     <label
                       htmlFor={item?.name}
@@ -230,7 +225,6 @@ const Accordian = () => {
             </div>
           </Accordion.Body>
         </Accordion.Item>
-
         <Accordion.Item eventKey="2">
           <Element name="carbon">
             <Accordion.Header onClick={() => {
@@ -263,7 +257,6 @@ const Accordian = () => {
                           backgroundImage: `url(${baseUrl + item?.color})`,
                           backgroundRepeat: "no-repeat",
                           backgroundSize: "cover",
-
                         }}
                       >
                         <span className="tick" >
@@ -374,7 +367,6 @@ const Accordian = () => {
                 </div>
               </form>
             </div>
-
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="5">
@@ -395,6 +387,7 @@ const Accordian = () => {
             </Accordion.Header>
           </Element>
           <Accordion.Body>
+   
             <div className="accordion__itemContent">
               <form className="ADD-ONS">
                 {
@@ -404,6 +397,8 @@ const Accordian = () => {
                       <div className="form-group ONscheckbox" key={index}>
                         <div className="form-divmain">
                           <div className="checkbox-texts">
+                            
+
                             <input
                               type="checkbox"
                               className="inp11"
@@ -411,10 +406,9 @@ const Accordian = () => {
                               name={item?.title}
                               onClick={(e) => {
                                 // console.log(e.target.checked)
-                                
                                 setSelectedAddon(item);
                                 setAddonItems({ ...item, des })
-                               {e.target.checked ? handleAcceptAddon(e,item): handleDeclineAddon(e,item)}
+                                { e.target.checked ? handleAcceptAddon(e, item) : handleDeclineAddon(e, item) }
                                 // {item.checked ? handleDeclineAddon(e) : ''}
                               }}
                               value={item?.title}
@@ -423,7 +417,7 @@ const Accordian = () => {
                             <label >{item?.title}</label>
 
                             <img
-                              onClick={() => {
+                              onClick={(e) => {
                                 handleShow(index);
                                 setSelectedAddon(item);
                                 setAddonItems({ ...item, des })
@@ -431,7 +425,6 @@ const Accordian = () => {
                               src={require("../../Assets/img/ii.png")}
                               alt=""
                             />
-
                             <br />
                           </div>
                           <div className="price text-right justify-content-end">
@@ -443,10 +436,8 @@ const Accordian = () => {
                   })}
               </form>
               <form className="ADD-ONS">
-
                 {addons?.addons?.advance.map((item, index) => {
                   let des = item?.description?.split("<br>");
-
                   return (
                     <div key={index}>
                       <div className="form-group ADDONcheckbox" >
@@ -459,7 +450,7 @@ const Accordian = () => {
                                   <a onClick={() => {
                                     handleShowY();
                                     setAddonItems({ ...item, des })
-                                    
+
                                   }}>
                                     <img
                                       src={require("../../Assets/img/ii.png")}
@@ -473,7 +464,6 @@ const Accordian = () => {
                           </div>
                         </div>
                       </div>
-
                       <div className="form-group ONscheckbox year">
                         <div className="form-divmain">
                           <div className="checkbox-texts">
@@ -484,7 +474,6 @@ const Accordian = () => {
                       </div>
 
                       {item?.options?.map((i, e) => {
-
                         let des = i?.description?.split("<br>");
                         return (<div className="form-group ONscheckbox" key={e}>
                           <div className="form-divmain">
@@ -495,11 +484,10 @@ const Accordian = () => {
                                 id={i}
                                 name={i?.title}
                                 onClick={(e) => {
-                                  
                                   handleShow();
                                   setSelectedAddon(i);
                                   setAddonItems({ ...i, des })
-                                 {e.target.checked ? handleAcceptAddon(e,i): handleDeclineAddon(e,i)}
+                                  { e.target.checked ? handleAcceptAddon(e, i) : handleDeclineAddon(e, i) }
                                 }}
                                 value={i?.title}
                                 checked={i.checked}

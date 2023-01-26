@@ -91,12 +91,7 @@ const SliderProvider = ({ children }) => {
     addCarsImgs(key, imagesData[param]?.mainImage)
     console.log("obj", objectDetail);
   };
-
-  // const handleAddonsArray = (e) => {
-  //   setAddonsArray1([...e])
-  // }
-
-  //summary defy selection
+ //summary defy selection
   const radioHandle = (e) => {
     setSummaryData(e.target.value);
     if (e.target.value === 'defy for fleet') {

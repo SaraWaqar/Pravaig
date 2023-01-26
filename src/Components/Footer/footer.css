@@ -68,8 +68,8 @@ footer.foot-2.desktop .row .col-lg-6 p {
 
 input.inp11 {
     appearance: none;
-    width: 17px;
-    height: 15px !important;
+    width: 20px;
+    height: 18px !important;
     border: 1px solid #FF7D00;
     position: relative;
     border-radius: 0;
@@ -81,13 +81,13 @@ div div input.inp11::before {
     font-family: 'FontAwesome';
     font-weight: 900;
     display: none;
-    top: 45% ;
-    font-size: 12px;
+    top: 45%;
+    font-size: 11px;
     left: 47%;
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 12px;
-    height: 18px;
+    width: 11px;
+    height: 16px;
     border: 1px solid transparent;
     
 }
@@ -243,3 +243,24 @@ div div .modal-dialog {
 .fade.modalWithImg.modal .col {
     text-align: left;
 }
+
+
+
+
+
+
+
+/* custom check */
+
+
+/* This css is for normalizing styles. You can skip this. */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  

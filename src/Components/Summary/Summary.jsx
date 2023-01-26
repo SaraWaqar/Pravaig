@@ -218,7 +218,7 @@ const Summary = () => {
                   </span>
                 </div></td>
                 <td></td>
-                <td scope="col" className="text-right" style={{ minWidth: 200 }}>INR {calculateQ.toLocaleString('en-IN')}</td>
+                <td scope="col" className="text-right" style={{ minWidth: 200,fontSize: 15}}>INR {calculateQ.toLocaleString('en-IN')}</td>
               </tr>
             </thead>
 
