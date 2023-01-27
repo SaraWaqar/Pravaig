@@ -261,7 +261,7 @@ const Summary = () => {
           </h3>
           {/* <a className="stdBtn">Download PDF</a> */}
         </div>
-        <div className="pdf2">
+        {/* <div className="pdf2">
           <h4>Share via: </h4>
           <div className="social">
             <ul className="social-icons">
@@ -292,7 +292,7 @@ const Summary = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

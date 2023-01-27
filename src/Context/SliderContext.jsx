@@ -91,7 +91,7 @@ const SliderProvider = ({ children }) => {
     setObjectDetail(object);
     setImage(imagesData[param]?.mainImage);
     addCarsImgs(key, imagesData[param]?.mainImage)
-    console.log("obj", objectDetail);
+    // console.log("obj", objectDetail);
   };
 
   //summary defy selection

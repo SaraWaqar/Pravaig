@@ -36,7 +36,7 @@ const Accordian = () => {
       setSelected(addons?.exteriorcolors[0]);
       handleSlides(addons?.exteriorcolors[0], 'exteriorcolors', 0)
       handleImageChange(0, 'wheel', addons?.wheels[0])
-      setImage(`${baseUrl+addons?.exteriorcolors[0]?.wheels[0]}`)
+      //setImage(`${baseUrl+addons?.exteriorcolors[0]?.wheels[0]}`)
     }
     
   }, [addons])
