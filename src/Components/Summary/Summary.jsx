@@ -175,8 +175,8 @@ const Summary = () => {
                 <td> </td>
                 <td>INR 0</td>
               </tr> :
-                addonsList.map((addons) => (
-                  <tr>
+                addonsList.map((addons, i) => (
+                  <tr key={i}>
                     <td>
                       {addons.code == "05" || addons.code == "06" ? "Maintenance Package " : null}
                       {addons.code == "03" || addons.code == "04" ? "Connectivity Package " : null}

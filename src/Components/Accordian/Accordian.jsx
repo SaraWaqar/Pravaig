@@ -49,22 +49,24 @@ const Accordian = () => {
   }, [tabs]);
 
   const [selectedAddon, setSelectedAddon] = useState({});
-  const handleAcceptAddon = (e, param) => {
-    console.log("param", param);
+
+
+
+  const handleAcceptAddon = (e) => {
     let arr = addonsArray;
     addons?.addons?.basic?.map((elem) => {
-      if (elem === param) {
+      if (elem === selectedAddon) {
         elem.checked = true;
-        arr.push(param);
+        arr.push(selectedAddon);
         arr = [...new Map(arr.map(v => [v._id, v])).values()]
         setAddonsArray1([...arr])
       }
     });
     addons?.addons?.advance.map((elem) => {
       elem.options.map((i, e) => {
-        if (i === param) {
+        if (i === selectedAddon) {
           i.checked = true;
-          arr.push(param);
+          arr.push(selectedAddon);
           arr = [...new Map(arr.map(v => [v._id, v])).values()]
           setAddonsArray1([...arr])
         }
@@ -73,8 +75,55 @@ const Accordian = () => {
     setShow({ check: false, img: '' });
   };
 
-  const handleDeclineAddon = (e, param) => {
+  const handleDeclineAddon = (e) => {
     let arr = addonsArray;
+    addons?.addons?.basic?.map((elem) => {
+      if (elem === selectedAddon) {
+        elem.checked = false;
+        arr = arr.filter(i => i !== elem)
+        arr = [...new Map(arr.map(v => [v._id, v])).values()]
+        setAddonsArray1(arr);
+      }
+      return;
+    });
+    addons?.addons?.advance.map((elem) => {
+      elem.options.map((item, e) => {
+        if (item === selectedAddon) {
+          item.checked = false;
+          arr = arr.filter(i => i !== item)
+          setAddonsArray1(arr);
+        }
+      })
+    });
+    setShow({ check: false, img: '' });
+  };
+
+  const handleAcceptAddon1 = (e, selectedAddon) => {
+    console.log("selectedAddon click", selectedAddon);
+    let arr = addonsArray;
+    addons?.addons?.basic?.map((elem) => {
+      if (elem === selectedAddon) {
+        elem.checked = true;
+        arr.push(selectedAddon);
+        arr = [...new Map(arr.map(v => [v._id, v])).values()]
+        setAddonsArray1([...arr])
+      }
+    });
+    addons?.addons?.advance.map((elem) => {
+      elem.options.map((i, e) => {
+        if (i === selectedAddon) {
+          i.checked = true;
+          arr.push(selectedAddon);
+          arr = [...new Map(arr.map(v => [v._id, v])).values()]
+          setAddonsArray1([...arr])
+        }
+      })
+    });
+    setShow({ check: false, img: '' });
+  };
+  const handleDeclineAddon1 = (e, param) => {
+    let arr = addonsArray;
+
     addons?.addons?.basic?.map((elem) => {
       if (elem === param) {
         elem.checked = false;
@@ -96,12 +145,63 @@ const Accordian = () => {
     });
     setShow({ check: false, img: '' });
   };
+
+
+
+  // const handleAcceptAddon = (e, param) => {
+  //   console.log("param", param);
+  //   let arr = addonsArray;
+  //   addons?.addons?.basic?.map((elem) => {
+  //     if (elem === param) {
+  //       elem.checked = true;
+  //       arr.push(param);
+  //       arr = [...new Map(arr.map(v => [v._id, v])).values()]
+  //       setAddonsArray1([...arr])
+  //     }
+  //   });
+  //   addons?.addons?.advance.map((elem) => {
+  //     elem.options.map((i, e) => {
+  //       if (i === param) {
+  //         i.checked = true;
+  //         arr.push(param);
+  //         arr = [...new Map(arr.map(v => [v._id, v])).values()]
+  //         setAddonsArray1([...arr])
+  //       }
+  //     })
+  //   });
+  //   setShow({ check: false, img: '' });
+  // };
+
+  // const handleDeclineAddon = (e, param) => {
+  //   let arr = addonsArray;
+
+  //   addons?.addons?.basic?.map((elem) => {
+  //     if (elem === param) {
+  //       elem.checked = false;
+  //       arr = arr.filter(i => i !== elem)
+  //       arr = [...new Map(arr.map(v => [v._id, v])).values()]
+  //       setAddonsArray1(arr);
+  //     }
+  //     return;
+  //   });
+  //   addons?.addons?.advance.map((elem) => {
+  //     elem.options.map((item, e) => {
+  //       if (item === param) {
+  //         item.checked = false;
+  //         arr = arr.filter(i => i !== item)
+  //         setAddonsArray1(arr);
+  //       }
+  //     })
+
+  //   });
+  //   setShow({ check: false, img: '' });
+  // };
+
   const handleImageChange = (index, key, item) => {
     let param = ExteriorColor.name || 'exteriorcolors';
     colorSwitch(index, key, item)
     let i = addons[param].findIndex(x => x.color === ExteriorColor?.color);
     setImage(addons[param][i]?.wheels[index])
-    console.log("wheel",addons[param][i]?.wheels[index]);
     addCarsImgs(key, addons[param][i]?.wheels[index])
   }
   const handleCheckAddon = (selectedItem, data, setdata) => {
@@ -421,7 +521,11 @@ const Accordian = () => {
                                 // console.log(e.target.checked)
                                 setSelectedAddon(item);
                                 setAddonItems({ ...item, des })
-                                { e.target.checked ? handleAcceptAddon(e, item) : handleDeclineAddon(e, item) }
+                                handleAcceptAddon(e, item)
+                                handleDeclineAddon(e, item)
+                                { e.target.checked ? handleAcceptAddon1(e, item) : handleDeclineAddon1(e, item) }
+
+                                // { e.target.checked ? handleAcceptAddon(e, item) : handleDeclineAddon(e, item) }
                                 // {item.checked ? handleDeclineAddon(e) : ''}
                               }}
                               value={item?.title}
@@ -500,7 +604,9 @@ const Accordian = () => {
                                   handleShow();
                                   setSelectedAddon(i);
                                   setAddonItems({ ...i, des })
-                                  { e.target.checked ? handleAcceptAddon(e, i) : handleDeclineAddon(e, i) }
+                                  { e.target.checked ? handleAcceptAddon1(e, i) : handleDeclineAddon1(e, i) }
+                                  //  handleAcceptAddon(e, i) 
+
                                 }}
                                 value={i?.title}
                                 checked={i.checked}
