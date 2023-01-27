@@ -7,12 +7,11 @@ import { UseSlider } from "../../Hooks/UseSlider";
 
 const Slider = () => {
   let url = `http://45.32.70.221/api/`;
-  const { image, sliderNum , selectedCars} = UseSlider();
- 
+  const { sliderNum, selectedCars } = UseSlider();
   return (
     <div>
       <div className="car-slider">
-      
+
         <Carousel
           selectedItem={sliderNum}
           showArrows={true}
@@ -20,13 +19,10 @@ const Slider = () => {
           showIndicators={false}
           showThumbs={false}
         >
-          
-           {/* <img src={url + image}/> */}
-     
           {selectedCars?.map((img, id) => {
             return <img key={id} src={url + img?.value} alt="" />;
-          })}  
-        </Carousel> 
+          })}
+        </Carousel>
       </div>
     </div>
   );

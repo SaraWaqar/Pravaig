@@ -10,9 +10,10 @@ const SliderProvider = ({ children }) => {
   const [isActive, setIsActive] = useState(false);
   const [objectDetail, setObjectDetail] = useState({})
   const [addonsArray, setAddonsArray1] = useState([])
-  const [selectedCars, setSelectedCars] = useState([{ key: 'exteriorcolors', value: 'upload/image_1672916403764.jpg' }]);
+  const [selectedCars, setSelectedCars] = useState([]);
   const [summaryData, setSummaryData] = useState('Defy')
   const [selected, setSelected] = useState()
+  const [test,setTest] = useState()
 
   useEffect(() => {
     fetchData();
@@ -34,6 +35,7 @@ const SliderProvider = ({ children }) => {
     }
     setObjectDetail(object);
     setImage(imagesData[0]?.mainImage);
+    setSelected({ key: 'exteriorcolors', value: 'upload/image_1672916403764.jpg' })
 
   }, []);
 
@@ -91,7 +93,8 @@ const SliderProvider = ({ children }) => {
     addCarsImgs(key, imagesData[param]?.mainImage)
     console.log("obj", objectDetail);
   };
- //summary defy selection
+
+  //summary defy selection
   const radioHandle = (e) => {
     setSummaryData(e.target.value);
     if (e.target.value === 'defy for fleet') {
@@ -120,7 +123,10 @@ const SliderProvider = ({ children }) => {
     isActive,
     setSelected,
     setIsActive,
-    selected
+    selected,
+    image,
+    setTest,
+    test
   };
 
   return (

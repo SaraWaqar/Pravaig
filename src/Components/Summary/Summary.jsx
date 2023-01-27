@@ -259,7 +259,7 @@ const Summary = () => {
               <span id="copied" className={`${isActiveSumm ? 'blockNone' : ''} `}> Copied!  </span>
             </span>
           </h3>
-          <a className="stdBtn">Download PDF</a>
+          {/* <a className="stdBtn">Download PDF</a> */}
         </div>
         <div className="pdf2">
           <h4>Share via: </h4>

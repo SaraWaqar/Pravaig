@@ -12,7 +12,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import MainModal from "../modal";
 
 const Accordian = () => {
-  const { colorSwitch, addons, setImage, radioHandle, addCarsImgs, setAddonsArray1, addonsArray, setSelected } = UseSlider();
+  const { colorSwitch, addons, setImage, radioHandle, image, addCarsImgs, setAddonsArray1, addonsArray, setSelected,setTest } = UseSlider();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow({ check: false, img: '' });
   const handleShow = (index) =>
@@ -26,12 +26,21 @@ const Accordian = () => {
   const tabs = params.get("tab");
   const [tab, setTab] = useState("0");
 
+
+  let baseUrl = `http://45.32.70.221/api/`;
+
+
   useEffect(() => {
     if (addons.length !== 0) {
+      console.log(addons);
       setSelected(addons?.exteriorcolors[0]);
       handleSlides(addons?.exteriorcolors[0], 'exteriorcolors', 0)
+      handleImageChange(0, 'wheel', addons?.wheels[0])
+      setImage(`${baseUrl+addons?.exteriorcolors[0]?.wheels[0]}`)
     }
+    
   }, [addons])
+
 
   useEffect(() => {
     if (tabs) {
@@ -88,10 +97,11 @@ const Accordian = () => {
     setShow({ check: false, img: '' });
   };
   const handleImageChange = (index, key, item) => {
-    let param = ExteriorColor.name;
+    let param = ExteriorColor.name || 'exteriorcolors';
     colorSwitch(index, key, item)
     let i = addons[param].findIndex(x => x.color === ExteriorColor?.color);
     setImage(addons[param][i]?.wheels[index])
+    console.log("wheel",addons[param][i]?.wheels[index]);
     addCarsImgs(key, addons[param][i]?.wheels[index])
   }
   const handleCheckAddon = (selectedItem, data, setdata) => {
@@ -108,7 +118,7 @@ const Accordian = () => {
     setdata(dataModify);
     handleShow()
   };
-  let baseUrl = `http://45.32.70.221/api/`;
+
   const handleSlides = (item, key, index) => {
 
     if (key === 'carbonedition') {
@@ -298,7 +308,10 @@ const Accordian = () => {
                           <input type="radio" name="gender" id={`wheel${index}`}
                             onClick={() =>
                               handleImageChange(index, 'wheel', ele)
-                            }
+                           }
+                           defaultValue={index == 0 ? true : false}
+                               defaultChecked={index == 0 ? true : false}                  
+                            
                           />
                           <span
                             style={{
