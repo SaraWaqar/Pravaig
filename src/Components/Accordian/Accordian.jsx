@@ -57,9 +57,9 @@ const Accordian = () => {
     addons?.addons?.basic?.map((elem) => {
       if (elem === selectedAddon) {
         elem.checked = true;
-        arr.push(selectedAddon);
+        arr.push(elem);
         arr = [...new Map(arr.map(v => [v._id, v])).values()]
-        setAddonsArray1([...arr])
+        setAddonsArray1([...arr]);
       }
     });
     addons?.addons?.advance.map((elem) => {
@@ -521,12 +521,11 @@ const Accordian = () => {
                                 // console.log(e.target.checked)
                                 setSelectedAddon(item);
                                 setAddonItems({ ...item, des })
-                                handleAcceptAddon(e, item)
-                                handleDeclineAddon(e, item)
-                                { e.target.checked ? handleAcceptAddon1(e, item) : handleDeclineAddon1(e, item) }
+                                // handleAcceptAddon(e, item)
+                                // handleDeclineAddon(e, item)
+                                { e.target.checked ?  handleAcceptAddon1(e, item)  : handleDeclineAddon1(e, item) }
 
                                 // { e.target.checked ? handleAcceptAddon(e, item) : handleDeclineAddon(e, item) }
-                                // {item.checked ? handleDeclineAddon(e) : ''}
                               }}
                               value={item?.title}
                               checked={item.checked}

@@ -178,8 +178,8 @@ const Summary = () => {
                 addonsList.map((addons, i) => (
                   <tr key={i}>
                     <td>
-                      {addons.code == "05" || addons.code == "06" ? "Maintenance Package " : null}
-                      {addons.code == "03" || addons.code == "04" ? "Connectivity Package " : null}
+                      {addons.code == "O5" || addons.code == "O6" ? "Maintenance Package " : null}
+                      {addons.code == "O3" || addons.code == "O4" ? "Connectivity Package " : null}
                       {addons.title}
                     </td>
                     <td>{addons.code}</td>
