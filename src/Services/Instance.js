@@ -4,7 +4,7 @@ import axios from "axios";
 const Instance = axios.create({
   // baseURL: "http://192.168.0.179:3700/",
   // baseURL : "http://192.168.0.179:3700/",
-  baseURL: "http://45.32.70.221/api/",
+  baseURL: "http://64.227.188.133/api",
   headers: {
     "Content-Type": "application/json",
     "ngrok-skip-browser-warning": "69420",

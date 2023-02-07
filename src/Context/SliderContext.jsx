@@ -39,7 +39,7 @@ const SliderProvider = ({ children }) => {
 
   }, []);
 
-  let baseUrl = `http://45.32.70.221/api/`;
+  let baseUrl = `http://64.227.188.133/api/`;
 
   const fetchData = async () => {
 

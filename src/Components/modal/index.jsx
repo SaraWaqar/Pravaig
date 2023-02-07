@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import { UseSlider } from "../../Hooks/UseSlider";
 
 const MainModal = (props) => {
-  let url = `http://45.32.70.221/api/`;
+  let url = `http://64.227.188.133/api/cars/`;
   // const { image, sliderNum } = UseSlider();
 
   // const [textData, setTextData]= useState({});

@@ -6,7 +6,7 @@ import { UseSlider } from "../../Hooks/UseSlider";
 
 
 const Slider = () => {
-  let url = `http://45.32.70.221/api/`;
+  let url = `http://64.227.188.133/api/`;
   const { sliderNum, selectedCars } = UseSlider();
   return (
     <div>
