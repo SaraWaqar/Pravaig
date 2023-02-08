@@ -39,7 +39,8 @@ const SliderProvider = ({ children }) => {
 
   }, []);
 
-  let baseUrl = `http://64.227.188.133/api/`;
+  // let baseUrl = `http://configurator.pravaig.com/api-v1/`;
+  let baseUrl =`http://configurator.pravaig.com/api/`;
 
   const fetchData = async () => {
 

@@ -36,10 +36,10 @@ const Summary = () => {
 
   let net = 0
   const values = Object.values(objectDetail);
-  let arr = values.filter((i) => i.type !== 'carbon')
+  let arr = values.filter((i) => i?.type !== 'carbon')
   if (arr.length !== 0) {
     arr.forEach(item => {
-      net += parseFloat(item.price?.split(",").join(""));
+      net += parseFloat(item?.price?.split(",").join(""));
     });
   }
 
